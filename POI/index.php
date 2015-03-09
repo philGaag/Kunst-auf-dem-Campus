@@ -113,6 +113,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 ArelXMLHelper::outputObject($oObject);
 
 //end the output
+//Bianca
 ArelXMLHelper::end();
 
 ?>
+

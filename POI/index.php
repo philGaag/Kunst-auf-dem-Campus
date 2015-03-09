@@ -114,5 +114,6 @@ ArelXMLHelper::outputObject($oObject);
 
 //end the output
 ArelXMLHelper::end();
+// phil was here
 
 ?>

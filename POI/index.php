@@ -81,7 +81,7 @@ ArelXMLHelper::outputObject($oObject);
 
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"8", //id
-		"Auf dem Weg zum Motivvvvvv - H. Leber", //title
+		"Auf dem Weg zum Motiv - H. Leber", //title
 		array(49.00072, 12.09714, 373), //location
 		"/resources/thumb_image.png", //thumb
 		"/resources/icon_image.png", //icon
@@ -113,9 +113,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 ArelXMLHelper::outputObject($oObject);
 
 //end the output
-//Bianca
 ArelXMLHelper::end();
-// phil was here
 
 ?>
 

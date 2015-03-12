@@ -27,11 +27,11 @@ arel.sceneReady(function()
 	// ***************************************************************************************
 
 
-	artistProfile = arel.Object.Model3D.createFromImage("artistProfile", "resources/profile.png");
+	artistProfile = arel.Object.Model3D.createFromImage("artistProfile", "resources/artist.png");
 	artistProfile.setVisibility(true);
 	artistProfile.setCoordinateSystemID(1);
 	artistProfile.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	artistProfile.setTranslation(setPosition(artistProfile, 300, -230, 20));
+	artistProfile.setTranslation(setPosition(artistProfile, 250, -150, 20));
 	arel.Scene.addObject(artistProfile);
 
 
@@ -57,8 +57,6 @@ function setPosition(target, x, y, z){
 function trackingHandler(type, param)
 {
 	//check if there is tracking information available
-
-	
 	if(param[0] !== undefined)
 	{
 		//if the pattern is found, hide the information to hold your phone over the pattern and start the appear information on the trooper (if not done so already)
@@ -72,7 +70,9 @@ function trackingHandler(type, param)
 			
 			if(param[0].getCoordinateSystemID() == 2){
 				$('#info').hide();
-				arel.Media.startSound("http://dev.junaio.com/publisherDownload/tutorial/test.mp3");
+				artistProfile.setCoordinateSystemID(2);
+				loremText.setCoordinateSystemID(2);
+				loremText.setTexture("resources/profile.png");
 			}
 			if(param[0].getCoordinateSystemID() == 3){
 				$('#info').hide();

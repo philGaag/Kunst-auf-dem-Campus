@@ -27,7 +27,7 @@ arel.sceneReady(function()
 	// ***************************************************************************************
 
 
-	artistProfile = arel.Object.Model3D.createFromImage("artistProfile", "resources/artist.png");
+	artistProfile = arel.Object.Model3D.createFromImage("artistProfile", "resources/Buttons/artist.png");
 	artistProfile.setVisibility(true);
 	artistProfile.setCoordinateSystemID(1);
 	artistProfile.setScale(new arel.Vector3D(1.0,1.0,1.0));
@@ -35,7 +35,7 @@ arel.sceneReady(function()
 	arel.Scene.addObject(artistProfile);
 
 
-	closeButton = arel.Object.Model3D.createFromImage("closeButton", "resources/close.png");
+	closeButton = arel.Object.Model3D.createFromImage("closeButton", "resources/Buttons/close.png");
 	closeButton.setVisibility(false);
 	closeButton.setCoordinateSystemID(1);
 	closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
@@ -72,7 +72,7 @@ function trackingHandler(type, param)
 				$('#info').hide();
 				artistProfile.setCoordinateSystemID(2);
 				loremText.setCoordinateSystemID(2);
-				loremText.setTexture("resources/profile.png");
+				loremText.setTexture("resources/Buttons/profile.png");
 			}
 			if(param[0].getCoordinateSystemID() == 3){
 				$('#info').hide();

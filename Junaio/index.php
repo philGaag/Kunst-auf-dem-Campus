@@ -38,7 +38,7 @@ $oObject = ArelXMLHelper::createGlueModel3D(
 	"artist_profile",													//ID
 	NULL,																//Path to model
 	"resources/Buttons/artist.png",											//Path to texture
-	array(200,-150,20),													//translation
+	array(100,-150,20),													//translation
 	array(1.0,1.0,1.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID
@@ -50,7 +50,7 @@ $oObject = ArelXMLHelper::createGlueModel3D(
 	"information",																//ID
 	NULL,																//Path to model
 	"resources/Buttons/information.png",											//Path to texture
-	array(200,-150,20),													//translation
+	array(300,-150,20),													//translation
 	array(1.0,1.0,1.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID

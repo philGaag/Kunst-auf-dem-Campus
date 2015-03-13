@@ -24,7 +24,7 @@
             <SensorCOS>
                 <SensorCosID>elephant</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="1125" heightMM="711">elephant.jpg</referenceImage>
+                    <referenceImage widthMM="2448" heightMM="3264">Kunst.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
             <SensorCOS>

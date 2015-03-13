@@ -23,7 +23,8 @@ arel.sceneReady(function()
 	// ***************************************************************************************
 	// OPTION  FOR CREATING OBJECTS - OBJECT IS DEFINED IN THE PHP FILE!
 	// ***************************************************************************************
-	loremText = arel.Scene.getObject("text");												
+	loremText = arel.Scene.getObject("text");	
+	closeButton = arel.Scene.getObject("close");											
 	// ***************************************************************************************
 
 
@@ -31,16 +32,9 @@ arel.sceneReady(function()
 	artistProfile.setVisibility(true);
 	artistProfile.setCoordinateSystemID(1);
 	artistProfile.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	artistProfile.setTranslation(setPosition(artistProfile, 250, -150, 20));
+	artistProfile.setTranslation(setPosition(artistProfile, 250, -150, 5));
 	arel.Scene.addObject(artistProfile);
 
-
-	closeButton = arel.Object.Model3D.createFromImage("closeButton", "resources/Buttons/close.png");
-	closeButton.setVisibility(false);
-	closeButton.setCoordinateSystemID(1);
-	closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	closeButton.setTranslation(setPosition(closeButton, 700, 300, 20));
-	arel.Scene.addObject(closeButton);
 	// 																										currentObject, type, params, open)
 	arel.Events.setListener(arel.Scene.getObject("artistProfile"), function(obj, type, params){openArtistInfo(obj, type, params, loremText);});
 	arel.Events.setListener(arel.Scene.getObject("closeButton"), function(obj, type, params){closeStuff(obj, type, params, loremText, artistProfile);});
@@ -64,34 +58,33 @@ function trackingHandler(type, param)
 		{
 			
 			if(param[0].getCoordinateSystemID() == 1){
-				$('#info').hide();
-				$('#winning').show();
+				hideHtmlStuff();
 			}
 			
 			if(param[0].getCoordinateSystemID() == 2){
-				$('#info').hide();
+				hideHtmlStuff();
 				artistProfile.setCoordinateSystemID(2);
 				loremText.setCoordinateSystemID(2);
-				loremText.setTexture("resources/Buttons/profile.png");
+				// loremText.setTexture("resources/Text/lorem_text.png");
 			}
 			if(param[0].getCoordinateSystemID() == 3){
-				$('#info').hide();
-				$('#winning').show();
+				// kunst
+				hideHtmlStuff();
+				artistProfile.setCoordinateSystemID(3);
+				loremText.setCoordinateSystemID(3);
+				loremText.setTexture("resources/Text/plexitext.jpg");
 			}
 			if(param[0].getCoordinateSystemID() == 4){
-				$('#info').hide();
-				$('#winning').show();
+				hideHtmlStuff();
 			}
 			if(param[0].getCoordinateSystemID() == 5){
-				$('#info').hide();
-				$('#winning').show();
+				
 			}
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
 		else if(type && type == arel.Events.Scene.ONTRACKING && param[0].getState() == arel.Tracking.STATE_NOTTRACKING)
 		{
-			$('#info').show();
-			$('#winning').hide();
+			showHtmlStuff();
 		}
 	}
 };
@@ -123,3 +116,12 @@ function closeStuff(obj, type, params, close, open){
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
+
+hideHtmlStuff = function(){
+	$('#info').hide();
+	$('#winning').show();
+};
+showHtmlStuff = function(){
+	$('#info').show();
+	$('#winning').hide();
+};

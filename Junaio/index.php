@@ -8,18 +8,21 @@ require_once 'ARELLibrary/arel_xmlhelper.class.php';
 //start output
 ArelXMLHelper::start(NULL, "arel/index.html", "resources/Tracking.zip");
 
+
+// BUTTONS **********************************************************************************
+// CLOSE
 $oObject = ArelXMLHelper::createGlueModel3D(
-	"text",																//ID
+	"close",															//ID
 	NULL,																//Path to model
-	"resources/Text/lorem_text.png",											//Path to texture
-	array(500,0,20),													//translation
+	"resources/Buttons/close.png",										//Path to texture
+	array(500,0,5),													//translation
 	array(10.0,10.0,10.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID
 );
 $oObject->setVisibility(false);
 ArelXMLHelper::outputObject($oObject);
-
+// GALLERY
 $oObject = ArelXMLHelper::createGlueModel3D(
 	"gallery",																//ID
 	NULL,																//Path to model
@@ -30,19 +33,31 @@ $oObject = ArelXMLHelper::createGlueModel3D(
 	1																	//CoordinateSystemID
 );
 ArelXMLHelper::outputObject($oObject);
-
+// ARTIST PROFILE
 $oObject = ArelXMLHelper::createGlueModel3D(
-	"information",																//ID
+	"artist_profile",													//ID
 	NULL,																//Path to model
-	"resources/BÚttons/information.png",										//Path to texture
-	array(150,-150,20),													//translation
+	"resources/Buttons/artist.png",											//Path to texture
+	array(200,-150,20),													//translation
 	array(1.0,1.0,1.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID
 );
 $oObject->setVisibility(false);
 ArelXMLHelper::outputObject($oObject);
-//end the output
-ArelXMLHelper::end();
+// INFORMATION
+$oObject = ArelXMLHelper::createGlueModel3D(
+	"information",																//ID
+	NULL,																//Path to model
+	"resources/Buttons/information.png",											//Path to texture
+	array(200,-150,20),													//translation
+	array(1.0,1.0,1.0,),												//scale
+	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
+	1																	//CoordinateSystemID
+);
+$oObject->setVisibility(false);
+ArelXMLHelper::outputObject($oObject);
+// BUTTONS END *******************************************************************************
 
+ArelXMLHelper::end();
 ?>

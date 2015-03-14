@@ -20,37 +20,37 @@ $oObject = ArelXMLHelper::createGlueModel3D(
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID
 );
-$oObject->setVisibility(false);
+$oObject->setVisibility(true);
 ArelXMLHelper::outputObject($oObject);
 // GALLERY
 $oObject = ArelXMLHelper::createGlueModel3D(
 	"gallery",																//ID
 	NULL,																//Path to model
 	"resources/Buttons/gallery.png",											//Path to texture
-	array(200,-150,20),													//translation
+	array(100,0,0),													//translation
 	array(1.0,1.0,1.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID
 );
 ArelXMLHelper::outputObject($oObject);
 // ARTIST PROFILE
-$oObject = ArelXMLHelper::createGlueModel3D(
-	"artist_profile",													//ID
-	NULL,																//Path to model
-	"resources/Buttons/artist.png",											//Path to texture
-	array(100,-150,20),													//translation
-	array(1.0,1.0,1.0,),												//scale
-	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
-	1																	//CoordinateSystemID
-);
-$oObject->setVisibility(false);
-ArelXMLHelper::outputObject($oObject);
+// $oObject = ArelXMLHelper::createGlueModel3D(
+// 	"artist_profile",													//ID
+// 	NULL,																//Path to model
+// 	"resources/Buttons/artist.png",											//Path to texture
+// 	array(0,0,0),													//translation
+// 	array(1.0,1.0,1.0,),												//scale
+// 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
+// 	1																	//CoordinateSystemID
+// );
+// $oObject->setVisibility(false);
+// ArelXMLHelper::outputObject($oObject);
 // INFORMATION
 $oObject = ArelXMLHelper::createGlueModel3D(
 	"information",																//ID
 	NULL,																//Path to model
 	"resources/Buttons/information.png",											//Path to texture
-	array(300,-150,20),													//translation
+	array(200,0,0),													//translation
 	array(1.0,1.0,1.0,),												//scale
 	new ArelRotation(ArelRotation::ROTATION_EULERDEG, array(0,0,0)),	//rotation
 	1																	//CoordinateSystemID

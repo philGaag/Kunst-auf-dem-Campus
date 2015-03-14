@@ -12,7 +12,7 @@
             <SensorCOS>
                 <SensorCosID>1__d9160576db07d8c8f7d163e8231b9949</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2448" heightMM="3264">aaa.jpg</referenceImage>
+                    <referenceImage widthMM="1641" heightMM="1283">AbstraktGegenstand.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
             <SensorCOS>

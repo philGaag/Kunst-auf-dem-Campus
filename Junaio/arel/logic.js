@@ -1,6 +1,7 @@
 var artistProfile,
-	information_text,
+	informationText,
 	closeButton,
+	gallery,
 	position;
 
 arel.sceneReady(function()
@@ -18,15 +19,42 @@ arel.sceneReady(function()
 	// loremText.setTranslation(setPosition(loremText, 500, 0, 20));
 	// arel.Scene.addObject(loremText);
 	// ***************************************************************************************
-	// OPTION  FOR CREATING OBJECTS - OBJECT IS DEFINED IN THE PHP FILE!
-	// ***************************************************************************************
-	artistProfile = arel.Scene.getObject("artist_profile");	
-	informationText = arel.Scene.getObject("information");	
-	closeButton = arel.Scene.getObject("close");		
-	gallery = arel.Scene.grtObject('gallery');									
+
+	artistProfile = arel.Object.Model3D.createFromImage("artistProfile", "resources/Buttons/artist.png");
+	artistProfile.setVisibility(true);
+	artistProfile.setCoordinateSystemID(1);
+	artistProfile.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	artistProfile.setTranslation(setPosition(artistProfile, 0, 0, 20));
+	arel.Scene.addObject(artistProfile);
+
+	// informationText = arel.Object.Model3D.createFromImage("informationText", "resources/Buttons/information.png");
+	// informationText.setVisibility(true);
+	// informationText.setCoordinateSystemID(1);
+	// informationText.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	// informationText.setTranslation(setPosition(informationText, 100, 0, 20));
+	// arel.Scene.addObject(informationText);
+
+	// closeButton = arel.Object.Model3D.createFromImage("closeButton", "resources/Buttons/close.png");
+	// closeButton.setVisibility(true);
+	// closeButton.setCoordinateSystemID(1);
+	// closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+	// closeButton.setTranslation(setPosition(closeButton, 300, 0, 20));
+	// arel.Scene.addObject(closeButton);
+
+	// gallery = arel.Object.Model3D.createFromImage("gallery", "resources/Buttons/gallery.png");
+	// gallery.setVisibility(true);
+	// gallery.setCoordinateSystemID(1);
+	// gallery.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	// gallery.setTranslation(setPosition(gallery, 200, 0, 20));
+	// arel.Scene.addObject(gallery);
+
+	// artistProfile = arel.Scene.getObject("artist_profile");	
+	// informationText = arel.Scene.getObject("information");	
+	// closeButton = arel.Scene.getObject("close");		
+	// gallery = arel.Scene.grtObject('gallery');									
 	// ***************************************************************************************
 	// 																										currentObject, type, params, open)
-	arel.Events.setListener(arel.Scene.getObject("artistProfile"), function(obj, type, params){openArtistInfo(obj, type, params, loremText);});
+	arel.Events.setListener(arel.Scene.getObject("artistProfile"), function(obj, type, params){openArtistInfo(obj, type, params, informationText);});
 	arel.Events.setListener(arel.Scene.getObject("closeButton"), function(obj, type, params){closeStuff(obj, type, params, loremText, artistProfile);});
 });
 

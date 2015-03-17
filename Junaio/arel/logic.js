@@ -83,18 +83,21 @@ displayText = function(obj, type, params, itemToOpen){
     			informationButton.setVisibility(false);
     			galleryButton.setVisibility(false);
     			setText(artistText);
+    	textItem.setVisibility(true);
+
     		break;
     		case informationButton: 
     			artistProfileButton.setVisibility(false);
     			galleryButton.setVisibility(false);
     			setText(informationText);
+    	textItem.setVisibility(true);
+
     		break;
     		case galleryButton: 
     			artistProfileButton.setVisibility(false);
     			informationButton.setVisibility(false);
     		break;
     	}
-    	itemToOpen.setVisibility(true);
     	closeButton.setParent(itemToOpen);
     	closeButton.setVisibility(true);
     }
@@ -104,6 +107,7 @@ closeItem = function(obj, type, params, itemToClose, activeObject){
 		obj.setVisibility(false);
 		itemToClose.setVisibility(false);
 		showAllButotns();
+		textItem.setTexture("resources/Text/empty.png");
 	}
 };
 setText = function (replacementText){
@@ -138,7 +142,7 @@ function initialiseObjects(){
 	artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
 	arel.Scene.addObject(artistProfileButton);
 
-	textItem = arel.Object.Model3D.createFromImage("textItem", "resources/Text/lorem_text.png");
+	textItem = arel.Object.Model3D.createFromImage("textItem", "resources/Text/empty.png");
 	textItem.setVisibility(false);
 	textItem.setCoordinateSystemID(1);
 	textItem.setScale(new arel.Vector3D(10.0,10.0,10.0));

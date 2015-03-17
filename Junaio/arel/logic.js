@@ -4,24 +4,18 @@ var artistProfileButton,
 	closeButton,
 	galleryButton,
 	position,
-	isArtist=false,
-	isInfo=false,
-	isGallery=false,
-	temp;
+	artistText,
+	informationText,
+	activeObject;
 
-arel.sceneReady(function()
-{
+arel.sceneReady(function(){
 	arel.Events.setListener(arel.Scene, function(type, param){trackingHandler(type, param);});
 	arel.Scene.getTrackingValues(function(trackingValues){receiveTrackingStatus(trackingValues);});	
 	initialiseObjects();
-	//																						   displayText(obj, type, params, itemToOpen){
-	arel.Events.setListener(arel.Scene.getObject("artistProfileButton"), function(obj, type, params){displayText(obj, type, params, textItem);});
-
-	arel.Events.setListener(arel.Scene.getObject("informationButton"), function(obj, type, params){displayText(obj, type, params, textItem);});
-
-	arel.Events.setListener(arel.Scene.getObject("galleryButton"), function(obj, type, params){displayText(obj, type, params, textItem);});
-// 																							 closeItem(obj, type, params, itemToClose,		 itemToOpen)
-	arel.Events.setListener(arel.Scene.getObject("closeButton"), function(obj, type, params){closeItem(obj, type, params, textItem, temp);});
+	arel.Events.setListener(arel.Scene.getObject("artistProfileButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
+	arel.Events.setListener(arel.Scene.getObject("informationButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
+	arel.Events.setListener(arel.Scene.getObject("galleryButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
+	arel.Events.setListener(arel.Scene.getObject("closeButton"),function(obj, type, params){closeItem(obj, type, params, textItem, activeObject);});
 });
 setPosition = function(target, x, y, z){
 	position = target.getTranslation();
@@ -41,7 +35,7 @@ trackingHandler = function(type, param){
 	//check if there is tracking information available
 	if(param[0] !== undefined)
 	{
-		//if the pattern is found, hide the information to hold your phone over the pattern and start the appear information on the trooper (if not done so already)
+		//if the pattern is found, hide the information to hold your phone over the pattern
 		if(type && type == arel.Events.Scene.ONTRACKING && param[0].getState() == arel.Tracking.STATE_TRACKING)
 		{
 			if(param[0].getCoordinateSystemID() == 1){
@@ -51,11 +45,16 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 2){
 				hideHtmlStuff();
 				setCOS(2);
-				// loremText.setTexture("resources/Text/lorem_text.png");
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexitext.jpg";
+				informationText = "resources/Text/lorem_text.png";
 			}
 			if(param[0].getCoordinateSystemID() == 3){
 				hideHtmlStuff();
 				setCOS(3);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
 			}
 			if(param[0].getCoordinateSystemID() == 4){
 				hideHtmlStuff();
@@ -72,43 +71,38 @@ trackingHandler = function(type, param){
 		}
 	}
 };
-//needed only for the start. If no valid tracking information is returned, show the "what to track" information
 receiveTrackingStatus = function(trackingValues){
-	//the user is currently not holding the phone over a valid reference image -> fade in the information what to track
 	if(trackingValues[0] === undefined)
 		$('#info').fadeIn("fast");	
 };
 displayText = function(obj, type, params, itemToOpen){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
-    	// obj.setVisibility(false);
-    	temp = obj;
     	// check which buttons must be hidden 
-    	switch(temp){
+    	switch(obj){
     		case artistProfileButton: 
     			informationButton.setVisibility(false);
     			galleryButton.setVisibility(false);
+    			setText(artistText);
     		break;
     		case informationButton: 
     			artistProfileButton.setVisibility(false);
     			galleryButton.setVisibility(false);
+    			setText(informationText);
     		break;
     		case galleryButton: 
     			artistProfileButton.setVisibility(false);
     			informationButton.setVisibility(false);
     		break;
     	}
-
     	itemToOpen.setVisibility(true);
-    	textItem.setTexture("resources/Text/plexitext.png");
-    	closeButton.setVisibility(true);
     	closeButton.setParent(itemToOpen);
+    	closeButton.setVisibility(true);
     }
 };
-closeItem = function(obj, type, params, itemToClose, temp){
+closeItem = function(obj, type, params, itemToClose, activeObject){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		obj.setVisibility(false);
 		itemToClose.setVisibility(false);
-		// temp.setVisibility(true);
 		showAllButotns();
 	}
 };
@@ -133,7 +127,7 @@ showHtmlStuff = function(){
 };
 function initialiseObjects(){
 	// ***************************************************************************************
-	// getting objects
+	// getting objects from php file
 	// artistProfileButton = arel.Scene.getObject("artist_profile");	
 	// ***************************************************************************************
 
@@ -155,14 +149,14 @@ function initialiseObjects(){
 	informationButton.setVisibility(true);
 	informationButton.setCoordinateSystemID(1);
 	informationButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	informationButton.setTranslation(setPosition(informationButton, 100, 0, 0));
+	informationButton.setTranslation(setPosition(informationButton, 100, 0, 20));
 	arel.Scene.addObject(informationButton);
 
 	closeButton = arel.Object.Model3D.createFromImage("closeButton", "resources/Buttons/close.png");
 	closeButton.setVisibility(false);
 	closeButton.setCoordinateSystemID(1);
 	closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	closeButton.setTranslation(setPosition(closeButton, 150, 0, 20));
+	closeButton.setTranslation(setPosition(closeButton, 200, 150, 30));
 	arel.Scene.addObject(closeButton);
 
 	galleryButton = arel.Object.Model3D.createFromImage("galleryButton", "resources/Buttons/gallery.png");

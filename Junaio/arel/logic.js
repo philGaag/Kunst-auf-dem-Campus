@@ -3,7 +3,11 @@ var artistProfileButton,
 	informationButton,
 	closeButton,
 	galleryButton,
-	position;
+	position,
+	isArtist=false,
+	isInfo=false,
+	isGallery=false,
+	temp;
 
 arel.sceneReady(function()
 {
@@ -17,10 +21,8 @@ arel.sceneReady(function()
 
 	arel.Events.setListener(arel.Scene.getObject("galleryButton"), function(obj, type, params){displayText(obj, type, params, textItem);});
 // 																							 closeItem(obj, type, params, itemToClose,		 itemToOpen)
-	arel.Events.setListener(arel.Scene.getObject("closeButton"), function(obj, type, params){closeItem(obj, type, params, informationButton, artistProfileButton);});
+	arel.Events.setListener(arel.Scene.getObject("closeButton"), function(obj, type, params){closeItem(obj, type, params, textItem, temp);});
 });
-
-
 setPosition = function(target, x, y, z){
 	position = target.getTranslation();
     position.setX(position.getX() + x);
@@ -28,7 +30,6 @@ setPosition = function(target, x, y, z){
     position.setY(position.getY() + y);
     return position;
 };
-
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
 	informationButton.setCoordinateSystemID(id);
@@ -36,7 +37,6 @@ setCOS = function(id){
 	textItem.setCoordinateSystemID(id);
 	closeButton.setCoordinateSystemID(id);
 };
-
 trackingHandler = function(type, param){
 	//check if there is tracking information available
 	if(param[0] !== undefined)
@@ -72,28 +72,44 @@ trackingHandler = function(type, param){
 		}
 	}
 };
-
 //needed only for the start. If no valid tracking information is returned, show the "what to track" information
-receiveTrackingStatus = function(trackingValues)
-{
+receiveTrackingStatus = function(trackingValues){
 	//the user is currently not holding the phone over a valid reference image -> fade in the information what to track
 	if(trackingValues[0] === undefined)
 		$('#info').fadeIn("fast");	
 };
 displayText = function(obj, type, params, itemToOpen){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
-    	obj.setVisibility(false);
+    	// obj.setVisibility(false);
+    	temp = obj;
+    	// check which buttons must be hidden 
+    	switch(temp){
+    		case artistProfileButton: 
+    			informationButton.setVisibility(false);
+    			galleryButton.setVisibility(false);
+    		break;
+    		case informationButton: 
+    			artistProfileButton.setVisibility(false);
+    			galleryButton.setVisibility(false);
+    		break;
+    		case galleryButton: 
+    			artistProfileButton.setVisibility(false);
+    			informationButton.setVisibility(false);
+    		break;
+    	}
+
     	itemToOpen.setVisibility(true);
-    	setText("resources/Text/plexitext.png");
+    	textItem.setTexture("resources/Text/plexitext.png");
     	closeButton.setVisibility(true);
     	closeButton.setParent(itemToOpen);
     }
 };
-closeItem = function(obj, type, params, itemToClose, itemToOpen){
+closeItem = function(obj, type, params, itemToClose, temp){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		obj.setVisibility(false);
-		close.setVisibility(false);
-		open.setVisibility(true);
+		itemToClose.setVisibility(false);
+		// temp.setVisibility(true);
+		showAllButotns();
 	}
 };
 setText = function (replacementText){
@@ -102,6 +118,11 @@ setText = function (replacementText){
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
+showAllButotns = function(){
+	informationButton.setVisibility(true);
+	galleryButton.setVisibility(true);
+	artistProfileButton.setVisibility(true);
+};
 hideHtmlStuff = function(){
 	$('#info').hide();
 	$('#winning').show();
@@ -112,21 +133,8 @@ showHtmlStuff = function(){
 };
 function initialiseObjects(){
 	// ***************************************************************************************
-	// OPTION 1 FOR CREATING OBJECTS
-	// ***************************************************************************************
-	// loremText = arel.Object.Model3D.createFromImage("loremText", "resources/lorem_text.png");
-	// loremText.setVisibility(false);
-	// loremText.setCoordinateSystemID(1);
-	// loremText.setScale(new arel.Vector3D(10.0,10.0,10.0));
-	// loremText.setTranslation(setPosition(loremText, 500, 0, 20));
-	// arel.Scene.addObject(loremText);
-	// ***************************************************************************************
 	// getting objects
 	// artistProfileButton = arel.Scene.getObject("artist_profile");	
-	// informationButton = arel.Scene.getObject("information");	
-	// closeButton = arel.Scene.getObject("close");		
-	// galleryButton = arel.Scene.grtObject('galleryButton');		
-	// textItem = arel.Scene.getObject("textItem");							
 	// ***************************************************************************************
 
 	artistProfileButton = arel.Object.Model3D.createFromImage("artistProfileButton", "resources/Buttons/artist.png");

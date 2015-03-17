@@ -1,7 +1,7 @@
 <?php
 require_once 'ARELLibrary/arel_xmlhelper.class.php';
 ArelXMLHelper::start(NULL, "/arel/index.html", ArelXMLHelper::TRACKING_GPS);
-
+// dea
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"1", //id
 		"Traumlandschaft", //title

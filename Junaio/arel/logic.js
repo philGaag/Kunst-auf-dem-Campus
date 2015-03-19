@@ -6,9 +6,11 @@ var artistProfileButton,
 	position,
 	artistText,
 	informationText,
+	interval,
 	activeObject;
 
 arel.sceneReady(function(){
+	stopLoadingScreen();
 	arel.Events.setListener(arel.Scene, function(type, param){trackingHandler(type, param);});
 	arel.Scene.getTrackingValues(function(trackingValues){receiveTrackingStatus(trackingValues);});	
 	initialiseObjects();
@@ -61,6 +63,7 @@ trackingHandler = function(type, param){
 				setCOS(4);
 			}
 			if(param[0].getCoordinateSystemID() == 5){
+				hideHtmlStuff();
 				setCOS(5);
 			}
 		}
@@ -83,16 +86,16 @@ displayText = function(obj, type, params, itemToOpen){
     			informationButton.setVisibility(false);
     			galleryButton.setVisibility(false);
     			setText(artistText);
-    	textItem.setVisibility(true);
-
+    			textItem.setVisibility(true);
     		break;
+
     		case informationButton: 
     			artistProfileButton.setVisibility(false);
     			galleryButton.setVisibility(false);
     			setText(informationText);
-    	textItem.setVisibility(true);
-
+    			textItem.setVisibility(true);
     		break;
+
     		case galleryButton: 
     			artistProfileButton.setVisibility(false);
     			informationButton.setVisibility(false);
@@ -116,6 +119,9 @@ setText = function (replacementText){
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
+smoothIn = function(){
+	interval = setInterval(function(){ smoothingLogic() }, 1000);
+};
 showAllButotns = function(){
 	informationButton.setVisibility(true);
 	galleryButton.setVisibility(true);
@@ -128,6 +134,10 @@ hideHtmlStuff = function(){
 showHtmlStuff = function(){
 	$('#info').show();
 	$('#winning').hide();
+};
+stopLoadingScreen = function(){
+	$(".star").css('-webkit-animation-play-state' , 'paused');
+	$("#loading_box").hide();
 };
 function initialiseObjects(){
 	// ***************************************************************************************

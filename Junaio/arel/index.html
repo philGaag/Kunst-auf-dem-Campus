@@ -75,7 +75,48 @@
             width: 100%;
             height: auto;
         }
-
+        #loading_box{
+            width: 80%;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 12.5%;
+            color: white;
+            display: inherit;
+        }
+        #loading_text{
+            font-size: 25px;
+            /*color: white;*/
+            height: 50px;
+            float: left;
+        }
+        .star{
+            float: left;
+            font-size: 25px;
+            line-height: 25px;
+            margin-left: 5px;
+            -webkit-animation-name: spin;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-play-state: running;
+        }
+        #star_one{
+            -webkit-animation-delay: 0s;
+        }
+        #star_two{
+            -webkit-animation-delay: 0.5s;
+        }
+        #star_three{
+            -webkit-animation-delay: 1s;
+        }
+        
+        @-webkit-keyframes spin { 
+            from { 
+                -webkit-transform: rotate(0deg); 
+            } to { 
+                -webkit-transform: rotate(360deg); 
+            }
+        }   
   		</style>
   		
     	<title>Uni Regensburg Kunstführer</title>
@@ -85,7 +126,13 @@
             <img id="channel_btn" src="../resources/Buttons/map.png">
         </div>
 		<div id="center">
-			<div id="info">Please hold your device over the trigger.
+			<div id="info">Bitte stellen Sie sich direkt vor dem Kunstwerk um es zu scannen!</div>
+            
+            <div id="loading_box">
+                <div id="loading_text">LOADING</div>
+                <div class="star" id="star_one">*</div>
+                <div class="star" id="star_two">*</div>
+                <div class="star" id="star_three">*</div>
             </div>
 		</div>		
 

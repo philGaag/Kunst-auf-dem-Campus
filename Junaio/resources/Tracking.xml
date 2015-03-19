@@ -10,13 +10,13 @@
                 </FeatureBasedParameters>
             </Parameters>
             <SensorCOS>
-                <SensorCosID>1__d9160576db07d8c8f7d163e8231b9949</SensorCosID>
+                <SensorCosID>KapellenFenster</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="1641" heightMM="1283">AbstraktGegenstand.jpg</referenceImage>
+                    <referenceImage widthMM="2448" heightMM="3264">KapellenFenster.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
             <SensorCOS>
-                <SensorCosID>2__ec70081e78559bfba368edb4a00dc008</SensorCosID>
+                <SensorCosID>awesomeFace</SensorCosID>
                 <Parameters>
                     <referenceImage widthMM="200" heightMM="200">awesome-face.png</referenceImage>
                 </Parameters>
@@ -55,7 +55,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>1__d9160576db07d8c8f7d163e8231b9949</SensorCosID>
+                <SensorCosID>KapellenFenster</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -97,7 +97,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>2__ec70081e78559bfba368edb4a00dc008</SensorCosID>
+                <SensorCosID>awesomeFace</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>

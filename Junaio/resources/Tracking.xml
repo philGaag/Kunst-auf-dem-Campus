@@ -22,9 +22,9 @@
                 </Parameters>
             </SensorCOS>
             <SensorCOS>
-                <SensorCosID>elephant</SensorCosID>
+                <SensorCosID>plexiglas</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2448" heightMM="3264">Kunst.jpg</referenceImage>
+                    <referenceImage widthMM="3264" heightMM="1692">plexiglas.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
             <SensorCOS>
@@ -139,7 +139,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>elephant</SensorCosID>
+                <SensorCosID>plexiglas</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>

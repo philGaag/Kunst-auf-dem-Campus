@@ -57,14 +57,30 @@ trackingHandler = function(type, param){
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
+
 			}
 			if(param[0].getCoordinateSystemID() == 4){
 				hideHtmlStuff();
 				setCOS(4);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
 			}
+
 			if(param[0].getCoordinateSystemID() == 5){
 				hideHtmlStuff();
 				setCOS(5);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
+			}
+
+			if(param[0].getCoordinateSystemID() == 6){
+				hideHtmlStuff();
+				setCOS(6);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
 			}
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
@@ -179,4 +195,18 @@ function initialiseObjects(){
 	galleryButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
 	arel.Scene.addObject(galleryButton);
+
+	duerer = arel.Object.Model3D.createFromImage("duerer", "resources/AdamEva/duerer.png");
+	duerer.setVisibility(true);
+	duerer.setCoordinateSystemID(4);
+	duerer.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
+	duerer.setTranslation(setPosition(duerer, 50, 0, 30)); //koordinaten
+	arel.Scene.addObject(duerer);
+
+	eyck = arel.Object.Model3D.createFromImage("eyck", "resources/AdamEva/eyck.png");
+	eyck.setVisibility(true);
+	eyck.setCoordinateSystemID(4);
+	eyck.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
+	eyck.setTranslation(setPosition(eyck, 250, 0, 30)); //koordinaten
+	arel.Scene.addObject(eyck);
 };

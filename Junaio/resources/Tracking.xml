@@ -28,15 +28,22 @@
                 </Parameters>
             </SensorCOS>
             <SensorCOS>
-                <SensorCosID>android</SensorCosID>
+                <SensorCosID>AdamEva</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="512" heightMM="512">android.png</referenceImage>
+                    <referenceImage widthMM="200" heightMM="200">burton.png</referenceImage>
                 </Parameters>
             </SensorCOS>
             <SensorCOS>
-                <SensorCosID>burton</SensorCosID>
+                <SensorCosID>Leber</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="439" heightMM="526">burton.png</referenceImage>
+                    <referenceImage widthMM="2336" heightMM="4160">LeberTrackable.jpg</referenceImage>
+                    <!-- <referenceImage widthMM="200" heightMM="200">awesome-face.png</referenceImage> -->
+                </Parameters>
+            </SensorCOS>
+            <SensorCOS>
+                <SensorCosID>Numa</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="1328" heightMM="1323">Numaklein.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
         </Sensor>
@@ -181,7 +188,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>android</SensorCosID>
+                <SensorCosID>AdamEva</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -197,7 +204,7 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>68.75</x>
+                        <x>0</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>
@@ -223,7 +230,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>burton</SensorCosID>
+                <SensorCosID>Leber</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -239,7 +246,49 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>68.75</x>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+        <COS>
+            <Name>COS_6</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>Numa</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>

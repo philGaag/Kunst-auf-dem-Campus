@@ -55,10 +55,12 @@ trackingHandler = function(type, param){
 		//if the pattern is found, hide the information to hold your phone over the pattern
 		if(type && type == arel.Events.Scene.ONTRACKING && param[0].getState() == arel.Tracking.STATE_TRACKING)
 		{
+			// Awesome Face
 			if(param[0].getCoordinateSystemID() == 1){
 				hideHtmlStuff();
 				setCOS(1);
 			}
+			// Kapelle
 			if(param[0].getCoordinateSystemID() == 2){
 				hideHtmlStuff();
 				setCOS(2);
@@ -66,36 +68,38 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexitext.jpg";
 				informationText = "resources/Text/gollwitz.png";
 			}
+			// Plexiglas
 			if(param[0].getCoordinateSystemID() == 3){
 				hideHtmlStuff();
 				setCOS(3);
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
-
 			}
+			// Wandteppich links
 			if(param[0].getCoordinateSystemID() == 4){
 				hideHtmlStuff();
 				setCOS(4);
-				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
 			}
-
+			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
 				hideHtmlStuff();
 				setCOS(5);
-				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
 			}
-
+			// Adam & Eva
 			if(param[0].getCoordinateSystemID() == 6){
 				hideHtmlStuff();
 				setCOS(6);
-				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
+			}
+			// Leber
+			if(param[0].getCoordinateSystemID() == 7){
+				hideHtmlStuff();
+				setCOS(7);
+			}
+			// Numa
+			if(param[0].getCoordinateSystemID() == 8){
+				hideHtmlStuff();
+				setCOS(8);
 			}
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
@@ -151,6 +155,9 @@ setText = function (replacementText){
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
+smoothIn = function(){
+	interval = setInterval(function(){ smoothingLogic() }, 1000);
+};
 showAllButotns = function(){
 	informationButton.setVisibility(true);
 	galleryButton.setVisibility(true);
@@ -255,42 +262,28 @@ function initialiseObjects(){
 	galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
 	arel.Scene.addObject(galleryButton);
 
-	duerer = arel.Object.Model3D.createFromImage("duerer", "resources/AdamEva/duerer.png");
-	duerer.setVisibility(true);
-	duerer.setCoordinateSystemID(4);
-	duerer.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
-	duerer.setTranslation(setPosition(duerer, 50, 0, 30)); //koordinaten
-	arel.Scene.addObject(duerer);
-
-	eyck = arel.Object.Model3D.createFromImage("eyck", "resources/AdamEva/eyck.png");
-	eyck.setVisibility(true);
-	eyck.setCoordinateSystemID(4);
-	eyck.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
-	eyck.setTranslation(setPosition(eyck, 250, 0, 30)); //koordinaten
-	arel.Scene.addObject(eyck);
-
 	// Plexiglasplasik Objects COS:3
 	// models
 	plexiObjectLevelOne = arel.Object.Model3D.create("plexiObjectLevelOne", "resources/Models/level_1.md2", "resources/Models/blue.jpg");
-	plexiObjectLevelOne.setCoordinateSystemID(3);
+	plexiObjectLevelOne.setCoordinateSystemID(2);
 	plexiObjectLevelOne.setVisibility(false);
-	plexiObjectLevelOne.setScale(new arel.Vector3D(0.4,0.4,0.4));
+	plexiObjectLevelOne.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelOne.setRotation(setObjectRotation(270,0,0));
 	plexiObjectLevelOne.setTranslation(setPosition(plexiObjectLevelOne, 0, 0, 20));
 	arel.Scene.addObject(plexiObjectLevelOne);
 
 	plexiObjectLevelTwo = arel.Object.Model3D.create("plexiObjectLevelTwo", "resources/Models/level_2.md2", "resources/Models/green.jpg");
-	plexiObjectLevelTwo.setCoordinateSystemID(3);
+	plexiObjectLevelTwo.setCoordinateSystemID(2);
 	plexiObjectLevelTwo.setVisibility(false);
-	plexiObjectLevelTwo.setScale(new arel.Vector3D(0.4,0.4,0.4));
+	plexiObjectLevelTwo.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelTwo.setRotation(setObjectRotation(270,0,0));
 	plexiObjectLevelTwo.setTranslation(setPosition(plexiObjectLevelTwo, 0, 0, 20));
 	arel.Scene.addObject(plexiObjectLevelTwo);
 
 	plexiObjectLevelThree = arel.Object.Model3D.create("plexiObjectLevelThree", "resources/Models/level_3.md2", "resources/Models/red.jpg");
-	plexiObjectLevelThree.setCoordinateSystemID(3);
+	plexiObjectLevelThree.setCoordinateSystemID(2);
 	plexiObjectLevelThree.setVisibility(false);
-	plexiObjectLevelThree.setScale(new arel.Vector3D(0.4,0.4,0.4));
+	plexiObjectLevelThree.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelThree.setRotation(setObjectRotation(270,0,0));
 	plexiObjectLevelThree.setTranslation(setPosition(plexiObjectLevelThree, 0, 0, 20));
 	arel.Scene.addObject(plexiObjectLevelThree);
@@ -307,21 +300,21 @@ function initialiseObjects(){
 	layerNumberOne = arel.Object.Model3D.createFromImage("layerNumberOne", "resources/Buttons/number_one.png");
 	layerNumberOne.setVisibility(false);
 	layerNumberOne.setCoordinateSystemID(3);
-	layerNumberOne.setScale(new arel.Vector3D(3.0,3.0,3.0));
+	layerNumberOne.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	layerNumberOne.setTranslation(setPosition(layerNumberOne, -100, 100, 30));
 	arel.Scene.addObject(layerNumberOne);
 
 	layerNumberTwo = arel.Object.Model3D.createFromImage("layerNumberTwo", "resources/Buttons/number_two.png");
 	layerNumberTwo.setVisibility(false);
 	layerNumberTwo.setCoordinateSystemID(3);
-	layerNumberTwo.setScale(new arel.Vector3D(3.0,3.0,3.0));
-	layerNumberTwo.setTranslation(setPosition(layerNumberTwo, -100, 200, 30));
+	layerNumberTwo.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	layerNumberTwo.setTranslation(setPosition(layerNumberTwo, -100, 150, 30));
 	arel.Scene.addObject(layerNumberTwo);
 
 	layerNumberThree = arel.Object.Model3D.createFromImage("layerNumberThree", "resources/Buttons/number_three.png");
 	layerNumberThree.setVisibility(false);
 	layerNumberThree.setCoordinateSystemID(3);
-	layerNumberThree.setScale(new arel.Vector3D(3.0,3.0,3.0));
-	layerNumberThree.setTranslation(setPosition(layerNumberThree, -100, 300, 30));
+	layerNumberThree.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	layerNumberThree.setTranslation(setPosition(layerNumberThree, -100, 200, 30));
 	arel.Scene.addObject(layerNumberThree);
 };

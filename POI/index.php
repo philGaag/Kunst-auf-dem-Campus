@@ -28,9 +28,9 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"9", //id
 		"Arkadenwand", //title
 		array(49.00006, 12.09654, 370), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
-		"H. Dumler \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"/resources/Arkadenwand.jpg", //thumb
+		"/resources/Arkadenwand.jpg", //icon
+		"H. Dumler \nan den Außenwänden der PT-Fakultät\nMalerei auf Beton", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -49,7 +49,7 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"21", //id
 		"Plexiglasplastik", //title
-		array(49.00112, 12.08485, 373), //location
+		array(48.998533, 12.095129, 373), //location
 		"/resources/thumb_image.png", //thumb
 		"/resources/icon_image.png", //icon
 		"J. Gollwitzer \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
@@ -115,10 +115,10 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"26", //id
 		"Bunter Maeander", //title
-		array(49.0011, 12.08512, 373), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
-		"R. Hensdorff \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(48.998373, 12.094102, 373), //location
+		"/resources/Maeander.jpg", //thumb
+		"/resources/Maeander.jpg", //icon
+		"R. Hensdorff \nSchlangenähnliche Bemalung auf Beton in verschiedenen Farbabstufungen\nAußenwand des zentralen Hörsaalgebäude", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -126,9 +126,9 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"29", //id
 		"Wandteppiche", //title
-		array(48.9985, 12.08781, 370), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
+		array(48.998652, 12.094792, 370), //location
+		"/resources/Wandteppich.jpg", //thumb
+		"/resources/Wandteppich.jpg", //icon
 		"J. Itten \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -138,9 +138,9 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"32", //id
 		"Angehaltene Bewegung", //title
 		array(48.99828, 12.09515, 370), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
-		"H. Kleinknecht \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"/resources/Kugel.jpg", //thumb
+		"/resources/Kugel.jpg", //icon
+		"H. Kleinknecht \nKugel vor dem Eingang zum zentralen Hörsaalgebäude\n1977\nTombakblech", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -149,8 +149,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"36", //id
 		"Begehbarer Wuerfel", //title
 		array(48.99479, 12.09525, 380), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
+		"/resources/Wuerfel.jpg", //thumb
+		"/resources/Wuerfel.jpg", //icon
 		"H. Langhammer\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -162,7 +162,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(49.00072, 12.09714, 373), //location
 		"/resources/thumb_image.png", //thumb
 		"/resources/icon_image.png", //icon
-		"H. Leber\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"H. Leber\nan den Wänden des Zentralen Hörsaalgebäude\n2007\nAcryl und Kohle", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -170,10 +170,10 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"38", //id
 		"Lichtsaeule", //title
-		array(49.00072, 12.09717, 370), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
-		"F. Lechner\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(48.998039, 12.095867, 370), //location
+		"/resources/Lichtsaeule.jpg", //thumb
+		"/resources/Lichtsaeule.jpg", //icon
+		"F. Lechner\nin der Vorhalle der Zentrabibliothek\nGlas und Stahl", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -181,10 +181,10 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"40", //id
 		"Hohlspiegelobjekte", //title
-		array(49.0011, 12.08512, 0), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
-		"A. Luther\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(48.998180, 12.094234, 0), //location
+		"/resources/Hohlspiegelobjekte.jpg", //thumb
+		"/resources/Hohlspiegelobjekte.jpg", //icon
+		"A. Luther\nGlas,Spiegel und Metall\n1974-1975", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -210,6 +210,95 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"12", //id
+		"Rechenmaschine", //title
+		array(48.996994, 12.095545, 0), //location
+		"/resources/Rechenmaschine.jpg", //thumb
+		"/resources/Rechenmaschine.jpg", //icon
+		"Hans Dumler\nneben der Druckerei im Erdgeschoss des Rechenzentrums\nLochblech, Metallobjekt\n1975", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"2", //id
+		"Kopf 77", //title
+		array(48.997312,12.096569 , 0), //location
+		"/resources/Kopf77.jpg", //thumb
+		"/resources/Kopf77.jpg", //icon
+		"Horst Antes\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"31", //id
+		"Brunnen", //title
+		array(48.999954, 12.094101 , 0), //location
+		"/resources/Brunnen.jpg", //thumb
+		"/resources/Brunnen.jpg", //icon
+		"Heinrich Kirchner\nin einem kleinen Hof im 1.OG des Rechtswissenschaftsgebäude", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"33", //id
+		"Karyatide R", //title
+		array(48.998951, 12.092456, 0), //location
+		"/resources/Karyatide.jpg", //thumb
+		"/resources/Karyatide.jpg", //icon
+		"Fritz König\nDenkmal für den 11.09.2001\nvor dem Haupteingang der Universität", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"42", //id
+		"Drei Stelen", //title
+		array(49.00005, 12.09472, 0), //location
+		"/resources/3Stelen.jpg", //thumb
+		"/resources/3Stelen.jpg", //icon
+		"Günter Mauermann\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"43", //id
+		"Vierkantwuerfel", //title
+		array(48.99332,12.09472, 0), //location
+		"/resources/Vierkantwuerfel.jpg", //thumb
+		"/resources/Vierkantwuerfel.jpg", //icon
+		"Andreas Sobeck\nauf der Brücke zum Sportzentrum\nstatisch - geometrische Konstrukt eines Kubus\nlackierter Stahl", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"45", //id
+		"Menschliche Gestalten", //title
+		array(48.99707,12.09525, 0), //location
+		"/resources/MenschlicheGestalten.jpg", //thumb
+		"/resources/MenschlicheGestalten.jpg", //icon
+		"Herbert Peters\n1977\nGranit\n5 meter hoch\nin der Nähe des Sees", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
+$oObject = ArelXMLHelper::createLocationBasedPOI(
+		"57", //id
+		"Schwimmende Pelikane", //title
+		array(48.994393,12.093637, 0), //location
+		"/resources/Pelikane.jpg", //thumb
+		"/resources/Pelikane.jpg", //icon
+		"Heinz Theuerjahr\nThis is our Image POI\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
+	);
+ArelXMLHelper::outputObject($oObject);
+
 
 //end the output
 ArelXMLHelper::end();

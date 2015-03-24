@@ -27,8 +27,14 @@
                     <referenceImage widthMM="2094" heightMM="2448">plexi.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
-            <SensorCOS>
+            <SensorCOS> 
                 <SensorCosID>AdamEva</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="200" heightMM="200">burton.png</referenceImage>
+                </Parameters>
+            </SensorCOS>
+            <SensorCOS> 
+                <SensorCosID>AdamEvaunten</SensorCosID>
                 <Parameters>
                     <referenceImage widthMM="200" heightMM="200">burton.png</referenceImage>
                 </Parameters>
@@ -174,8 +180,51 @@
                 </COSOffset>
             </SensorSource>
         </COS>
+         <COS>
+            <Name>COS_3</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>plexiglas</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+        
         <COS>
-            <Name>COS_4</Name>
+            <Name>COS_6</Name>
             <Fuser type="SmoothingFuser">
                 <Parameters>
                     <AlphaRotation>0.5</AlphaRotation>
@@ -217,7 +266,49 @@
             </SensorSource>
         </COS>
         <COS>
-            <Name>COS_5</Name>
+            <Name>COS_7</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>AdamEvaunten</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+        <COS>
+            <Name>COS_8</Name>
             <Fuser type="SmoothingFuser">
                 <Parameters>
                     <AlphaRotation>0.5</AlphaRotation>
@@ -259,7 +350,7 @@
             </SensorSource>
         </COS>
         <COS>
-            <Name>COS_6</Name>
+            <Name>COS_9</Name>
             <Fuser type="SmoothingFuser">
                 <Parameters>
                     <AlphaRotation>0.5</AlphaRotation>

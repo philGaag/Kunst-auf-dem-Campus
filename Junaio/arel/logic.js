@@ -17,7 +17,8 @@ var artistProfileButton,
 	layerNumberOneActive = true,
 	layerNumberTwoActive = true,
 	layerNumberThreeActive = true,
-	activeObject;
+	activeObject,
+	youTubeButton;
 
 arel.sceneReady(function(){
 	stopLoadingScreen();
@@ -37,6 +38,7 @@ arel.sceneReady(function(){
 	arel.Events.setListener(arel.Scene.getObject("layerNumberOne"),function(obj, type, params){handleLayers(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberTwo"),function(obj, type, params){handleLayers(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberThree"),function(obj, type, params){handleLayers(obj, type, params);});
+	arel.Events.setListener(arel.Scene.getObject("youTubeButton"),function(obj, type, params){playVideo(type);});
 
 
 });
@@ -51,6 +53,13 @@ setObjectRotation = function(x, y, z){
 	rotation = new arel.Rotation();
 	rotation.setFromEulerAngleDegrees(new arel.Vector3D(x, y, z));
 	return rotation;
+};
+playVideo = function(type){
+	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		arel.Media.startVideo("http://philg.avior.uberspace.de/Video/test.mp4");
+		// which is nicer?
+		// arel.Media.openWebsite("https://www.youtube.com/watch?v=7b2f2kpTVao");
+	}
 };
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
@@ -91,6 +100,7 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 4){
 				hideHtmlStuff();
 				setCOS(4);
+				// play vid
 			}
 			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
@@ -442,4 +452,12 @@ function initialiseObjects(){
 	layerNumberThree.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	layerNumberThree.setTranslation(setPosition(layerNumberThree, -100, 200, 30));
 	arel.Scene.addObject(layerNumberThree);
+
+	// Wandteppich objects
+	youTubeButton = arel.Object.Model3D.createFromImage("youTubeButton", "resources/Buttons/youtube.png");
+	youTubeButton.setVisibility(true);
+	youTubeButton.setCoordinateSystemID(1);
+	youTubeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+	youTubeButton.setTranslation(setPosition(youTubeButton, 100, 50, 20));
+	arel.Scene.addObject(youTubeButton);
 };

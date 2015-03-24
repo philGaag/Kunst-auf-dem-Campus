@@ -50,8 +50,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"21", //id
 		"Plexiglasplastik", //title
 		array(48.998533, 12.095129, 373), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
+		"/resources/Plexi.png", //thumb
+		"/resources/Plexi.png", //icon
 		"J. Gollwitzer \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -160,8 +160,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"37", //id
 		"Auf dem Weg zum Motiv", //title
 		array(49.00072, 12.09714, 373), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
+		"/resources/WegZumMotiv.jpg", //thumb
+		"/resources/WegZumMotiv.jpg", //icon
 		"H. Leber\nan den Wänden des Zentralen Hörsaalgebäude\n2007\nAcryl und Kohle", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);

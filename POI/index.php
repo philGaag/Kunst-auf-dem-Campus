@@ -159,7 +159,7 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"37", //id
 		"Auf dem Weg zum Motiv", //title
-		array(49.00072, 12.09714, 373), //location
+		array(48.998508, 12.094622, 0), //location
 		"/resources/thumb_image.png", //thumb
 		"/resources/icon_image.png", //icon
 		"H. Leber\nan den Wänden des Zentralen Hörsaalgebäude\n2007\nAcryl und Kohle", //description
@@ -170,7 +170,7 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"38", //id
 		"Lichtsaeule", //title
-		array(48.998039, 12.095867, 370), //location
+		array(48.998039, 12.095867, 0), //location
 		"/resources/Lichtsaeule.jpg", //thumb
 		"/resources/Lichtsaeule.jpg", //icon
 		"F. Lechner\nin der Vorhalle der Zentrabibliothek\nGlas und Stahl", //description

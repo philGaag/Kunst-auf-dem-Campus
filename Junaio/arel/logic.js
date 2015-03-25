@@ -28,7 +28,7 @@ arel.sceneReady(function(){
 	initialiseObjects();
 	arel.Events.setListener(arel.Scene.getObject("artistProfileButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
 	arel.Events.setListener(arel.Scene.getObject("informationButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
-	arel.Events.setListener(arel.Scene.getObject("galleryButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
+	arel.Events.setListener(arel.Scene.getObject("galleryButton"),function(obj, type, params){openImageGallery(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("appleButton"),function(obj, type, params){handleSound(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("towerButton"),function(obj, type, params){handleSound(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("kugelButton"),function(obj, type, params){handleSound(obj, type, params);});
@@ -46,7 +46,7 @@ arel.sceneReady(function(){
 openImageGallery = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		if(dumlerGallery){
-			arel.Media.openWebsite(/*"BIANCA HIER BITTE LINK ZUR DUMLER GALLERIE EINFÜGEN"*/);
+			arel.Media.openWebsite("http://homepages.uni-regensburg.de/~knb07554/DumlerGalerie/gallery.html");
 		}else{
 			arel.Media.openWebsite(/*"BIANCA HIER BITTE LINK ZUR LEBER GALLERIE EINFÜGEN"*/);
 		}
@@ -97,6 +97,9 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexitext.jpg";
 				informationText = "resources/Text/gollwitz.png";
 				artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
+				dumlerGallery = true;
+				galleryButton.setCoordinateSystemID(1);
+				galleryButton.setVisibility(true);
 
 				// set the texts for artistText
 				// set the text for informationText

@@ -6,8 +6,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"1", //id
 		"Traumlandschaft", //title
 		array(48.988184, 12.091618, 0), //location
-		"/resources/Traumlandschaft.png", //thumb
-		"/resources/Traumlandschaft.png", //icon
+		"/resources/Traumlandschaft.jpg", //thumb
+		"/resources/Traumlandschaft.jpg", //icon
 		"Otmaer Alt\nPatientenbereich Zahnklinik\n\nFarbig beschichtete Platten mit bunten teils mechanischen Stahlkonstruktionen", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -17,8 +17,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"8", //id
 		"Das Abstrakte ist noch Gegenstand genug", //title
 		array(48.99844, 12.09521, 0), //location
-		"/resources/AbstrakteGegenstandgenug.png", //thumb
-		"/resources/AbstrakteGegenstandgenug.png", //icon
+		"/resources/AbstrakteGegenstandgenug.jpg", //thumb
+		"/resources/AbstrakteGegenstandgenug.jpg", //icon
 		"Manfred Dinnes\n1983\nPastellkreide\n in der Nähe von H10", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -39,8 +39,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"17", //id
 		"Kapellenausstattung", //title
 		array(48.987712, 12.090749, 0), //location
-		"/resources/KapelleKlinik.png", //thumb
-		"/resources/KapelleKlinik.png", //icon
+		"/resources/KapelleKlinik.jpg", //thumb
+		"/resources/KapelleKlinik.jpg", //icon
 		"Blasius Gerg\nKapelle Universitaetklinikum\nbestehend aus einem Tabernakel, einem Vortragekreuz, Sedilien, dem Altar, Ambo und einem Weihwasserbecken", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -50,8 +50,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"21", //id
 		"Plexiglasplastik", //title
 		array(48.998533, 12.095129, 0), //location
-		"/resources/Plexi.png", //thumb
-		"/resources/Plexi.png", //icon
+		"/resources/Plexi.jpg", //thumb
+		"/resources/Plexi.jpg", //icon
 		"Josef Gollwitzer \n 1973\nim Foyer des Auditorium Maximum", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -61,8 +61,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"22a", //id
 		"Hommage a Kepler", //title
 		array(48.985982, 12.089639, 0), //location
-		"/resources/HommageKepler.png", //thumb
-		"/resources/HommageKepler.png", //icon
+		"/resources/HommageKepler.jpg", //thumb
+		"/resources/HommageKepler.jpg", //icon
 		"Elmar Göppl \nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -72,8 +72,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"22b", //id
 		"Hommage a Kepler", //title
 		array(48.986647, 12.089754, 0), //location
-		"/resources/HommageKepler.png", //thumb
-		"/resources/HommageKepler.png", //icon
+		"/resources/HommageKepler.jpg", //thumb
+		"/resources/HommageKepler.jpg", //icon
 		"Elmar Göppl \nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -83,8 +83,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"22c", //id
 		"Hommage a Kepler", //title
 		array(48.985973, 12.090741, 0), //location
-		"/resources/HommageKepler.png", //thumb
-		"/resources/HommageKepler.png", //icon
+		"/resources/HommageKepler.jpg", //thumb
+		"/resources/HommageKepler.jpg", //icon
 		"Elmar Göppl \nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -94,8 +94,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"23", //id
 		"Adam und Eva", //title
 		array(48.99409, 12.09419, 0), //location
-		"/resources/Adam_und_Eva.png", //thumb
-		"/resources/Adam_und_Eva.png", //icon
+		"/resources/Adam_und_Eva.jpg", //thumb
+		"/resources/Adam_und_Eva.jpg", //icon
 		"HAP Grieshaber \n1970\nHolzschnitt\nim Treppenhaus der Biologischeb Fakultät", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -105,8 +105,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"25", //id
 		"Landschaftsprojektionen", //title
 		array(48.9878596, 12.0915968, 0), //location
-		"/resources/Landschaftsprojektionen.png", //thumb
-		"/resources/Landschaftsprojektionen.png", //icon
+		"/resources/Landschaftsprojektionen.jpg", //thumb
+		"/resources/Landschaftsprojektionen.jpg", //icon
 		"Eckard Hauser\nWartebereich Zahnklinik\n14 bewegliche Elemente, welche eine idyllische Landschaft zeigen.", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -159,12 +159,9 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"37", //id
 		"Auf dem Weg zum Motiv", //title
-<<<<<<< HEAD
-=======
 		array(48.998508, 12.094622, 0), //location
 		"/resources/WegZumMotiv.jpg", //thumb
 		"/resources/WegZumMotiv.jpg", //icon
->>>>>>> 783f89ecaeec6a924291ef71f3f32febf59c462d
 		"H. Leber\nan den Wänden des Zentralen Hörsaalgebäude\n2007\nAcryl und Kohle", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -196,8 +193,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"50", //id
 		"Komposition V/89", //title
 		array(48.986672, 12.090312, 0), //location
-		"/resources/Komposition.png", //thumb
-		"/resources/Komposition.png", //icon
+		"/resources/Komposition.jpg", //thumb
+		"/resources/Komposition.jpg", //icon
 		"Heiner Riepl\nErdgeschoss\nÖl auf Leinwand", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
@@ -207,8 +204,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"61", //id
 		"Die Hockende", //title
 		array(48.988006, 12.088281, 0), //location
-		"/resources/Hockende.png", //thumb
-		"/resources/Hockende.png", //icon
+		"/resources/Hockende.jpg", //thumb
+		"/resources/Hockende.jpg", //icon
 		"Wilhelm Uhlig\nAtrium der Physikalischen Therapie\nBrunnenanlage mit Bronzeskulptur", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);

@@ -19,7 +19,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.99844, 12.09521, 0), //location
 		"/resources/AbstrakteGegenstandgenug.png", //thumb
 		"/resources/AbstrakteGegenstandgenug.png", //icon
-		"Manfred Dinnes\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Manfred Dinnes\n1983\nPastellkreide\n in der Nähe von H10", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -30,7 +30,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(49.00006, 12.09654, 370), //location
 		"/resources/Arkadenwand.jpg", //thumb
 		"/resources/Arkadenwand.jpg", //icon
-		"H. Dumler \nan den Außenwänden der PT-Fakultät\nMalerei auf Beton", //description
+		"H. Dumler \nan den Außenwaenden der PT-Fakultät\nMalerei auf Beton", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -41,7 +41,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.987712, 12.090749, 0), //location
 		"/resources/KapelleKlinik.png", //thumb
 		"/resources/KapelleKlinik.png", //icon
-		"Blasius Gerg\nKapelle Universitätklinikum\nbestehend aus einem Tabernakel, einem Vortragekreuz, Sedilien, dem Altar, Ambo und einem Weihwasserbecken", //description
+		"Blasius Gerg\nKapelle Universitaetklinikum\nbestehend aus einem Tabernakel, einem Vortragekreuz, Sedilien, dem Altar, Ambo und einem Weihwasserbecken", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -49,10 +49,10 @@ ArelXMLHelper::outputObject($oObject);
 $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"21", //id
 		"Plexiglasplastik", //title
-		array(48.998533, 12.095129, 373), //location
+		array(48.998533, 12.095129, 0), //location
 		"/resources/Plexi.png", //thumb
 		"/resources/Plexi.png", //icon
-		"J. Gollwitzer \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Josef Gollwitzer \n 1973\nim Foyer des Auditorium Maximum", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -96,7 +96,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.99409, 12.09419, 0), //location
 		"/resources/Adam_und_Eva.png", //thumb
 		"/resources/Adam_und_Eva.png", //icon
-		"HAP Grieshaber \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"HAP Grieshaber \n1970\nHolzschnitt\nim Treppenhaus der Biologischeb Fakultät", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -129,7 +129,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.998652, 12.094792, 370), //location
 		"/resources/Wandteppich.jpg", //thumb
 		"/resources/Wandteppich.jpg", //icon
-		"J. Itten \n This is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"J. Itten \n1974\nKnüfteppich\Zentrales Hörsaalgebäude", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -151,7 +151,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.99479, 12.09525, 380), //location
 		"/resources/Wuerfel.jpg", //thumb
 		"/resources/Wuerfel.jpg", //icon
-		"H. Langhammer\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Helmut Langhammer\n1978\nGranit\nauf einem Rasenstück hinter dem Chemiegebäude", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -160,11 +160,8 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		"37", //id
 		"Auf dem Weg zum Motiv", //title
 <<<<<<< HEAD
-		array(48.998508, 12.094622, 0), //location
-		"/resources/thumb_image.png", //thumb
-		"/resources/icon_image.png", //icon
 =======
-		array(49.00072, 12.09714, 373), //location
+		array(48.998508, 12.094622, 0), //location
 		"/resources/WegZumMotiv.jpg", //thumb
 		"/resources/WegZumMotiv.jpg", //icon
 >>>>>>> 783f89ecaeec6a924291ef71f3f32febf59c462d
@@ -179,7 +176,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.998039, 12.095867, 0), //location
 		"/resources/Lichtsaeule.jpg", //thumb
 		"/resources/Lichtsaeule.jpg", //icon
-		"F. Lechner\nin der Vorhalle der Zentrabibliothek\nGlas und Stahl", //description
+		"Florian Lechner\nin der Vorhalle der Zentrabibliothek\nGlas und Stahl", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -190,7 +187,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.998180, 12.094234, 0), //location
 		"/resources/Hohlspiegelobjekte.jpg", //thumb
 		"/resources/Hohlspiegelobjekte.jpg", //icon
-		"A. Luther\nGlas,Spiegel und Metall\n1974-1975", //description
+		"Adolf Luther\nGlas,Spiegel und Metall\n1974-1975", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -234,7 +231,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.997312,12.096569 , 0), //location
 		"/resources/Kopf77.jpg", //thumb
 		"/resources/Kopf77.jpg", //icon
-		"Horst Antes\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Horst Antes\n1977\nCortenstahl\nInnenhof des Rechenzentrums", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -267,7 +264,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(49.00005, 12.09472, 0), //location
 		"/resources/3Stelen.jpg", //thumb
 		"/resources/3Stelen.jpg", //icon
-		"Günter Mauermann\nThis is our Image POI\n\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Günter Mauermann\n1977\nAluminium\n vor dem VG Gebäude", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -300,7 +297,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.994393,12.093637, 0), //location
 		"/resources/Pelikane.jpg", //thumb
 		"/resources/Pelikane.jpg", //icon
-		"Heinz Theuerjahr\nThis is our Image POI\nThe image source is: http://www.flickr.com/photos/ediamjunaio/5206110815/", //description
+		"Heinz Theuerjahr\n1973\nBronze", //description
 		array(array("Show Image", "imageButton", "http://farm5.static.flickr.com/4104/5206110815_7ea891be0b.jpg")) //buttons
 	);
 ArelXMLHelper::outputObject($oObject);

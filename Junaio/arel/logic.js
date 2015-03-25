@@ -18,7 +18,8 @@ var artistProfileButton,
 	layerNumberTwoActive = true,
 	layerNumberThreeActive = true,
 	activeObject,
-	youTubeButton;
+	youTubeButton,
+	dumlerGallery = false;
 
 arel.sceneReady(function(){
 	stopLoadingScreen();
@@ -42,11 +43,27 @@ arel.sceneReady(function(){
 
 
 });
+openImageGallery = function(obj, type, params){
+	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		if(dumlerGallery){
+			arel.Media.openWebsite(/*"BIANCA HIER BITTE LINK ZUR DUMLER GALLERIE EINFÜGEN"*/);
+		}else{
+			arel.Media.openWebsite(/*"BIANCA HIER BITTE LINK ZUR LEBER GALLERIE EINFÜGEN"*/);
+		}
+	}
+};
 setPosition = function(target, x, y, z){
 	position = target.getTranslation();
-    position.setX(position.getX() + x);
-    position.setY(position.getY() + y);
-    position.setY(position.getY() + y);
+    position.setX(0 + x);
+    position.setY(0 + y);
+    position.setZ(0 + z);
+    return position;
+};
+setCloseButton = function(target){
+	position = target.getTranslation();
+	position.setX(position.getX() + 400);
+    position.setY(position.getY() + 500);
+    position.setZ(position.getZ() + 25);
     return position;
 };
 setObjectRotation = function(x, y, z){
@@ -64,8 +81,6 @@ playVideo = function(type){
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
 	informationButton.setCoordinateSystemID(id);
-	//galleryButton.setCoordinateSystemID(id);
-	textItem.setCoordinateSystemID(id);
 	closeButton.setCoordinateSystemID(id);
 };
 trackingHandler = function(type, param){
@@ -79,6 +94,15 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 1){
 				hideHtmlStuff();
 				setCOS(1);
+				artistText = "resources/Text/plexitext.jpg";
+				informationText = "resources/Text/gollwitz.png";
+				artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
+
+				// set the texts for artistText
+				// set the text for informationText
+				// close button position is set in the click handler B)
+				// set the translation of artistTextObject
+				// set the translation of informationTextObject
 			}
 			// Kapelle
 			if(param[0].getCoordinateSystemID() == 2){
@@ -92,9 +116,13 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 3){
 				hideHtmlStuff();
 				setCOS(3);
-				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
+
+				// layerNumberOne.setTranslation(setPosition(layerNumberOne, 100,100,20));
+				// layerNumberTwo.setTranslation(setPosition(layerNumberOne, 100,100,20));
+				// layerNumberThree.setTranslation(setPosition(layerNumberOne, 100,100,20));
+
 			}
 			// Wandteppich links
 			if(param[0].getCoordinateSystemID() == 4){
@@ -121,6 +149,9 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 8){
 				hideHtmlStuff();
 				setCOS(8);
+				// boolean für gallery abfangen!
+				// BEI DUMLER TRACKABLE TRUE SETZEN!
+				dumlerGallery = false;
 			}
 
 			// Numa
@@ -161,21 +192,20 @@ displayText = function(obj, type, params, itemToOpen){
     		case artistProfileButton: 
     			informationButton.setVisibility(false);
     			galleryButton.setVisibility(false);
-    			setText(artistText);
-    			textItem.setVisibility(true);
+    			artistTextObject.setTexture(artistText);
+    			artistTextObject.setVisibility(true);
+    			activeObject = artistTextObject;
+				closeButton.setTranslation(setCloseButton(artistTextObject)); 
     		break;
 
     		case informationButton: 
     			artistProfileButton.setVisibility(false);
     			galleryButton.setVisibility(false);
-    			setText(informationText);
-    			textItem.setVisibility(true);
-    		break;
-
-    		case galleryButton: 
-    			artistProfileButton.setVisibility(false);
-    			informationButton.setVisibility(false);
-    			arel.Media.openWebsite("https://www.facebook.com");
+    			informationTextObject.setTexture(informationText);
+    			informationTextObject.setVisibility(true);
+    			activeObject = informationTextObject;
+    			// redundant?
+				closeButton.setTranslation(setCloseButton(informationTextObject)); 
     		break;
     	}
     	closeButton.setParent(itemToOpen);
@@ -211,20 +241,24 @@ handleSound = function(obj, type, params){
     }
 };
 
-closeItem = function(obj, type, params, itemToClose, activeObject){
+/*ACTIVE OBJECT CAN BE REMOVED?*/
+closeItem = function(obj, type, params, activeObject){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		obj.setVisibility(false);
-		itemToClose.setVisibility(false);
+		activeObject.setVisibility(false);
+		activeObject.setTexture("resources/Text/empty.png");
 		showAllButotns();
-		textItem.setTexture("resources/Text/empty.png");
 	}
 };
-setText = function (replacementText){
-	textItem.setTexture(replacementText);
-};
+// setText = function (obj, replacementText){
+// 	textItem.setTexture(replacementText);
+// };
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
+showHelp = function(){
+	// arel.Media.openWebsite(EXTERNAL PAGE WITH INFO ON IT);
+};
 smoothIn = function(){
 	interval = setInterval(function(){ smoothingLogic() }, 1000);
 };
@@ -247,6 +281,7 @@ stopLoadingScreen = function(){
 };
 openNumberButtons = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		$("#toastText").text("Please work you beauty");
 		plexiglasLayerButton.setVisibility(false);
 		layerNumberOne.setVisibility(true);
 		layerNumberTwo.setVisibility(true);
@@ -254,38 +289,45 @@ openNumberButtons = function(obj, type, params){
 		plexiObjectLevelOne.setVisibility(true);
 		plexiObjectLevelTwo.setVisibility(true);
 		plexiObjectLevelThree.setVisibility(true);
+
+		artistProfileButton.setVisibility(false);
+		informationButton.setVisibility(false);
 	}
 };
 handleLayers = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
-		// make instruction text visible
-		// make number buttons visible
 		switch(obj){
 			case layerNumberOne:
 				if(layerNumberOneActive){
 					plexiObjectLevelOne.setVisibility(false);
 					layerNumberOneActive = false;
+					layerNumberOne.setTexture("resources/Buttons/number_one_grey.png");
 				}else{
 					plexiObjectLevelOne.setVisibility(true);
 					layerNumberOneActive = true;
+					layerNumberOne.setTexture("resources/Buttons/number_one.png");
 				}
 			break;
 			case layerNumberTwo:
 				if(layerNumberTwoActive){
 					plexiObjectLevelTwo.setVisibility(false);
 					layerNumberTwoActive = false;
+					layerNumberTwo.setTexture("resources/Buttons/number_two_grey.png");
 				}else{
 					plexiObjectLevelTwo.setVisibility(true);
 					layerNumberTwoActive = true;
+					layerNumberTwo.setTexture("resources/Buttons/number_two.png");
 				}
 			break;
 			case layerNumberThree:
 				if(layerNumberThreeActive){
 					plexiObjectLevelThree.setVisibility(false);
 					layerNumberThreeActive = false;
+					layerNumberThree.setTexture("resources/Buttons/number_three_grey.png");
 				}else{
 					plexiObjectLevelThree.setVisibility(true);
 					layerNumberThreeActive = true;
+					layerNumberThree.setTexture("resources/Buttons/number_three.png");
 				}
 			break;
 		}
@@ -301,7 +343,7 @@ function initialiseObjects(){
 	artistProfileButton.setVisibility(true);
 	artistProfileButton.setCoordinateSystemID(1);
 	artistProfileButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
+	artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 0));
 	arel.Scene.addObject(artistProfileButton);
 
 	textItem = arel.Object.Model3D.createFromImage("textItem", "resources/Text/empty.png");
@@ -310,6 +352,22 @@ function initialiseObjects(){
 	textItem.setScale(new arel.Vector3D(10.0,10.0,10.0));
 	textItem.setTranslation(setPosition(textItem, 0, 0, 0));
 	arel.Scene.addObject(textItem);
+
+// 	these replace the single textItem
+	artistTextObject = arel.Object.Model3D.createFromImage("artistTextObject", "resources/Text/empty.png");
+	artistTextObject.setVisibility(false);
+	artistTextObject.setCoordinateSystemID(1);
+	artistTextObject.setScale(new arel.Vector3D(10.0,10.0,10.0));
+	artistTextObject.setTranslation(setPosition(artistTextObject, 0, 0, 0));
+	arel.Scene.addObject(artistTextObject);
+
+	informationTextObject = arel.Object.Model3D.createFromImage("informationTextObject", "resources/Text/empty.png");
+	informationTextObject.setVisibility(false);
+	informationTextObject.setCoordinateSystemID(1);
+	informationTextObject.setScale(new arel.Vector3D(10.0,10.0,10.0));
+	informationTextObject.setTranslation(setPosition(informationTextObject, 0, 0, 0));
+	arel.Scene.addObject(informationTextObject);
+// 
 
 	informationButton = arel.Object.Model3D.createFromImage("informationButton", "resources/Buttons/information.png");
 	informationButton.setVisibility(true);
@@ -327,7 +385,7 @@ function initialiseObjects(){
 
 	galleryButton = arel.Object.Model3D.createFromImage("galleryButton", "resources/Buttons/gallery.png");
 	galleryButton.setVisibility(true);
-	galleryButton.setCoordinateSystemID(1);
+	galleryButton.setCoordinateSystemID(10);
 	galleryButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
 	arel.Scene.addObject(galleryButton);
@@ -400,7 +458,7 @@ function initialiseObjects(){
 	// Plexiglasplasik Objects COS:3
 	// models
 	plexiObjectLevelOne = arel.Object.Model3D.create("plexiObjectLevelOne", "resources/Models/level_1.md2", "resources/Models/blue.jpg");
-	plexiObjectLevelOne.setCoordinateSystemID(2);
+	plexiObjectLevelOne.setCoordinateSystemID(1);
 	plexiObjectLevelOne.setVisibility(false);
 	plexiObjectLevelOne.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelOne.setRotation(setObjectRotation(270,0,0));
@@ -408,7 +466,7 @@ function initialiseObjects(){
 	arel.Scene.addObject(plexiObjectLevelOne);
 
 	plexiObjectLevelTwo = arel.Object.Model3D.create("plexiObjectLevelTwo", "resources/Models/level_2.md2", "resources/Models/green.jpg");
-	plexiObjectLevelTwo.setCoordinateSystemID(2);
+	plexiObjectLevelTwo.setCoordinateSystemID(1);
 	plexiObjectLevelTwo.setVisibility(false);
 	plexiObjectLevelTwo.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelTwo.setRotation(setObjectRotation(270,0,0));
@@ -416,7 +474,7 @@ function initialiseObjects(){
 	arel.Scene.addObject(plexiObjectLevelTwo);
 
 	plexiObjectLevelThree = arel.Object.Model3D.create("plexiObjectLevelThree", "resources/Models/level_3.md2", "resources/Models/red.jpg");
-	plexiObjectLevelThree.setCoordinateSystemID(2);
+	plexiObjectLevelThree.setCoordinateSystemID(1);
 	plexiObjectLevelThree.setVisibility(false);
 	plexiObjectLevelThree.setScale(new arel.Vector3D(0.1,0.1,0.1));
 	plexiObjectLevelThree.setRotation(setObjectRotation(270,0,0));
@@ -426,7 +484,7 @@ function initialiseObjects(){
 	//  Plexiglas layer button
 	plexiglasLayerButton = arel.Object.Model3D.createFromImage("plexiglasLayerButton", "resources/Buttons/layer_button.png");
 	plexiglasLayerButton.setVisibility(true);
-	plexiglasLayerButton.setCoordinateSystemID(3);
+	plexiglasLayerButton.setCoordinateSystemID(1);
 	plexiglasLayerButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	plexiglasLayerButton.setTranslation(setPosition(plexiglasLayerButton, -100, 50, 30));
 	arel.Scene.addObject(plexiglasLayerButton);
@@ -434,21 +492,21 @@ function initialiseObjects(){
 	// number buttons for 3d model
 	layerNumberOne = arel.Object.Model3D.createFromImage("layerNumberOne", "resources/Buttons/number_one.png");
 	layerNumberOne.setVisibility(false);
-	layerNumberOne.setCoordinateSystemID(3);
+	layerNumberOne.setCoordinateSystemID(1);
 	layerNumberOne.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	layerNumberOne.setTranslation(setPosition(layerNumberOne, -100, 100, 30));
 	arel.Scene.addObject(layerNumberOne);
 
 	layerNumberTwo = arel.Object.Model3D.createFromImage("layerNumberTwo", "resources/Buttons/number_two.png");
 	layerNumberTwo.setVisibility(false);
-	layerNumberTwo.setCoordinateSystemID(3);
+	layerNumberTwo.setCoordinateSystemID(1);
 	layerNumberTwo.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	layerNumberTwo.setTranslation(setPosition(layerNumberTwo, -100, 150, 30));
 	arel.Scene.addObject(layerNumberTwo);
 
 	layerNumberThree = arel.Object.Model3D.createFromImage("layerNumberThree", "resources/Buttons/number_three.png");
 	layerNumberThree.setVisibility(false);
-	layerNumberThree.setCoordinateSystemID(3);
+	layerNumberThree.setCoordinateSystemID(1);
 	layerNumberThree.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	layerNumberThree.setTranslation(setPosition(layerNumberThree, -100, 200, 30));
 	arel.Scene.addObject(layerNumberThree);

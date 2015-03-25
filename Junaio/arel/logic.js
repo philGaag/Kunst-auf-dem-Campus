@@ -142,16 +142,40 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 6){
 				hideHtmlStuff();
 				setCOS(6);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
+				//set Position and Scale for standard buttons
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -15, 50, 50));
+				informationButton.setTranslation(setPosition(informationButton, -15, 50, 50));
+				artistProfileButton.setScale(new arel.Vector3D(0.7,0.7,0.7));
+				informationButton.setScale(new arel.Vector3D(0.7,0.7,0.7));
 			}
-			// Adam & Eva unten
+			// Dumler
 			if(param[0].getCoordinateSystemID() == 7){
 				hideHtmlStuff();
 				setCOS(7);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
+				//set Position and Scale for standard buttons
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
+				informationButton.setTranslation(setPosition(informationButton, 0, 0, 20));
+				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 			}
 			// Leber
 			if(param[0].getCoordinateSystemID() == 8){
 				hideHtmlStuff();
 				setCOS(8);
+				// define the text for the standard buttons
+				artistText = "resources/Text/plexiglas_plastik.png";
+				informationText = "resources/Text/different_text.png";
+				//set Position and Scale for standard buttons
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, -200, 20));
+				informationButton.setTranslation(setPosition(informationButton, 0, -200, 20));
+				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 				// boolean für gallery abfangen!
 				// BEI DUMLER TRACKABLE TRUE SETZEN!
 				dumlerGallery = false;
@@ -167,15 +191,10 @@ trackingHandler = function(type, param){
 				//set Position and Scale for standard buttons
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 350, 20));
 				informationButton.setTranslation(setPosition(informationButton, -400, 350, 20));
-				//galleryButton.setVisibility(false);
 				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 			}
 
-			if(param[0].getCoordinateSystemID() == 10){
-				hideHtmlStuff();
-				setCOS(10);
-			}
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
 		else if(type && type == arel.Events.Scene.ONTRACKING && param[0].getState() == arel.Tracking.STATE_NOTTRACKING)
@@ -221,23 +240,23 @@ handleSound = function(obj, type, params){
     	// check which button is triggered
     	switch(obj){
     		case appleButton: 
-    			arel.Media.startSound("resources/audio/beam.mp3");
+    			arel.Media.startSound("resources/audio/Apfel.mp3");
     		break;
 
     		case towerButton: 
-    			arel.Media.startSound("resources/audio/beam.mp3");
+    			arel.Media.startSound("resources/audio/Fernsehturm.mp3");
     		break;
 
     		case kugelButton: 
-    			arel.Media.startSound("resources/audio/beam.mp3");
+    			arel.Media.startSound("resources/audio/Kugel.mp3");
     		break;
 
     		case domButton: 
-    			arel.Media.startSound("resources/audio/beam.mp3");
+    			arel.Media.startSound("resources/audio/Dom.mp3");
     		break;
 
     		case humansButton: 
-    			arel.Media.startSound("resources/audio/beam.mp3");
+    			arel.Media.startSound("resources/audio/Personen.mp3");
     		break;
     	}
 
@@ -398,18 +417,17 @@ function initialiseObjects(){
 	duerer = arel.Object.Model3D.createFromImage("duerer", "resources/AdamEva/duerer.png");
 	duerer.setVisibility(true);
 	duerer.setCoordinateSystemID(6);
-	duerer.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
-	duerer.setTranslation(setPosition(duerer, 50, 0, 30)); //koordinaten
+	duerer.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
+	duerer.setTranslation(setPosition(duerer, -210, 0, 50)); //koordinaten
 	arel.Scene.addObject(duerer);
 
 	eyck = arel.Object.Model3D.createFromImage("eyck", "resources/AdamEva/eyck.png");
 	eyck.setVisibility(true);
 	eyck.setCoordinateSystemID(6);
-	eyck.setScale(new arel.Vector3D(5.0,5.0,5.0)); //größe
-	eyck.setTranslation(setPosition(eyck, 250, 0, 30)); //koordinaten
+	eyck.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
+	eyck.setTranslation(setPosition(eyck, 160, 0, 50)); //koordinaten
 	arel.Scene.addObject(eyck);
 
-	// Leber Objekte COS: 8
 
 	// Numa Objekte COS: 9
 
@@ -448,15 +466,6 @@ function initialiseObjects(){
 	humansButton.setTranslation(setPosition(humansButton, -900, -50, 30));
 	arel.Scene.addObject(humansButton);
 
-	hintText = arel.Object.Model3D.createFromImage("hintText", "resources/Text/different_text.png");
-	hintText.setVisibility(true);
-	hintText.setCoordinateSystemID(9);
-	hintText.setScale(new arel.Vector3D(2.0,2.0,2.0));
-	hintText.setTranslation(setPosition(hintText, 0, -400, 100));
-	arel.Scene.addObject(hintText);
-
-
-	// Dumler Objekte COS: 10
 
 	// Plexiglasplasik Objects COS:3
 	// models

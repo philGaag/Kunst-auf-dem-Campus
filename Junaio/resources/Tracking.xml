@@ -48,14 +48,14 @@
             <SensorCOS>
                 <SensorCosID>AdamEva</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="200" heightMM="200">burton.png</referenceImage>
+                    <referenceImage widthMM="350" heightMM="374">AdamEva.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
 
-            <SensorCOS> 
-                <SensorCosID>AdamEvaunten</SensorCosID>
+            <SensorCOS>
+                <SensorCosID>Dumler</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="200" heightMM="200">burton.png</referenceImage>
+                    <referenceImage widthMM="572" heightMM="323">dumlerTrackable.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
 
@@ -73,12 +73,7 @@
                 </Parameters>
             </SensorCOS>
 
-            <SensorCOS>
-                <SensorCosID>Dumler</SensorCosID>
-                <Parameters>
-                    <referenceImage widthMM="572" heightMM="323">dumlerTrackable.jpg</referenceImage>
-                </Parameters>
-            </SensorCOS>
+
 
         </Sensor>
     </Sensors>
@@ -349,7 +344,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>AdamEvaunten</SensorCosID>
+                <SensorCosID>Dumler</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -462,47 +457,6 @@
                 </COSOffset>
             </SensorSource>
         </COS>
-        <COS>
-            <Name>COS_10</Name>
-            <Fuser type="SmoothingFuser">
-                <Parameters>
-                    <AlphaRotation>0.5</AlphaRotation>
-                    <AlphaTranslation>0.8</AlphaTranslation>
-                    <GammaRotation>0.5</GammaRotation>
-                    <GammaTranslation>0.8</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
-                </Parameters>
-            </Fuser>
-            <SensorSource trigger="1">
-                <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>Dumler</SensorCosID>
-                <HandEyeCalibration>
-                    <TranslationOffset>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                    </TranslationOffset>
-                    <RotationOffset>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <w>1</w>
-                    </RotationOffset>
-                </HandEyeCalibration>
-                <COSOffset>
-                    <TranslationOffset>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                    </TranslationOffset>
-                    <RotationOffset>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <w>1</w>
-                    </RotationOffset>
-                </COSOffset>
-            </SensorSource>
-        </COS>
+       
     </Connections>
 </TrackingData>

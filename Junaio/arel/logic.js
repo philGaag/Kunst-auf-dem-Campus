@@ -6,6 +6,9 @@ var artistProfileButton,
 	appleButton,
 	towerButton,
 	kugelButton,
+	domButton,
+	humansButton,
+	hintText,
 	position,
 	artistText,
 	informationText,
@@ -25,9 +28,11 @@ arel.sceneReady(function(){
 	arel.Events.setListener(arel.Scene.getObject("artistProfileButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
 	arel.Events.setListener(arel.Scene.getObject("informationButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
 	arel.Events.setListener(arel.Scene.getObject("galleryButton"),function(obj, type, params){displayText(obj, type, params, textItem);});
-	arel.Events.setListener(arel.Scene.getObject("appleButton"),function(obj, type, params){handleSound(obj);});
-	arel.Events.setListener(arel.Scene.getObject("towerButton"),function(obj, type, params){handleSound(obj);});
-	arel.Events.setListener(arel.Scene.getObject("kugelButton"),function(obj, type, params){handleSound(obj);});
+	arel.Events.setListener(arel.Scene.getObject("appleButton"),function(obj, type, params){handleSound(obj, type, params);});
+	arel.Events.setListener(arel.Scene.getObject("towerButton"),function(obj, type, params){handleSound(obj, type, params);});
+	arel.Events.setListener(arel.Scene.getObject("kugelButton"),function(obj, type, params){handleSound(obj, type, params);});
+	arel.Events.setListener(arel.Scene.getObject("domButton"),function(obj, type, params){handleSound(obj, type, params);});
+	arel.Events.setListener(arel.Scene.getObject("humansButton"),function(obj, type, params){handleSound(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("closeButton"),function(obj, type, params){closeItem(obj, type, params, textItem, activeObject);});
 	arel.Events.setListener(arel.Scene.getObject("plexiglasLayerButton"),function(obj, type, params){openNumberButtons(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberOne"),function(obj, type, params){handleLayers(obj, type, params);});
@@ -59,7 +64,7 @@ playVideo = function(type){
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
 	informationButton.setCoordinateSystemID(id);
-	galleryButton.setCoordinateSystemID(id);
+	//galleryButton.setCoordinateSystemID(id);
 	textItem.setCoordinateSystemID(id);
 	closeButton.setCoordinateSystemID(id);
 };
@@ -125,6 +130,17 @@ trackingHandler = function(type, param){
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
+				//set Position and Scale for standard buttons
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 350, 20));
+				informationButton.setTranslation(setPosition(informationButton, -400, 350, 20));
+				//galleryButton.setVisibility(false);
+				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+			}
+
+			if(param[0].getCoordinateSystemID() == 10){
+				hideHtmlStuff();
+				setCOS(10);
 			}
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
@@ -167,20 +183,28 @@ displayText = function(obj, type, params, itemToOpen){
     }
 };
 
-handleSound = function(obj){
+handleSound = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
     	// check which button is triggered
     	switch(obj){
     		case appleButton: 
-    			arel.Media.startSound(resources/audio/beam.mp3)
+    			arel.Media.startSound("resources/audio/beam.mp3");
     		break;
 
     		case towerButton: 
-    			arel.Media.startSound(resources/audio/beam.mp3)
+    			arel.Media.startSound("resources/audio/beam.mp3");
     		break;
 
     		case kugelButton: 
-    			arel.Media.startSound(resources/audio/beam.mp3)
+    			arel.Media.startSound("resources/audio/beam.mp3");
+    		break;
+
+    		case domButton: 
+    			arel.Media.startSound("resources/audio/beam.mp3");
+    		break;
+
+    		case humansButton: 
+    			arel.Media.startSound("resources/audio/beam.mp3");
     		break;
     	}
 
@@ -308,7 +332,7 @@ function initialiseObjects(){
 	galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
 	arel.Scene.addObject(galleryButton);
 
-	// Adam und Eva Objekte
+	// Adam und Eva Objekte COS: 6
 
 	duerer = arel.Object.Model3D.createFromImage("duerer", "resources/AdamEva/duerer.png");
 	duerer.setVisibility(true);
@@ -324,28 +348,54 @@ function initialiseObjects(){
 	eyck.setTranslation(setPosition(eyck, 250, 0, 30)); //koordinaten
 	arel.Scene.addObject(eyck);
 
-	// Numa Objekte
+	// Leber Objekte COS: 8
+
+	// Numa Objekte COS: 9
 
 	appleButton = arel.Object.Model3D.createFromImage("appleButton", "resources/Buttons/appleButton.png");
 	appleButton.setVisibility(true);
 	appleButton.setCoordinateSystemID(9);
-	appleButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	appleButton.setTranslation(setPosition(appleButton, -100, 0, 50));
+	appleButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	appleButton.setTranslation(setPosition(appleButton, -150, -100, 30));
 	arel.Scene.addObject(appleButton);
 
 	towerButton = arel.Object.Model3D.createFromImage("towerButton", "resources/Buttons/towerButton.png");
 	towerButton.setVisibility(true);
 	towerButton.setCoordinateSystemID(9);
-	towerButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	towerButton.setTranslation(setPosition(towerButton, 200, 200, 50));
+	towerButton.setScale(new arel.Vector3D(4.5,4.5,4.5));
+	towerButton.setTranslation(setPosition(towerButton, 700, 240, 40));
 	arel.Scene.addObject(towerButton);
 
 	kugelButton = arel.Object.Model3D.createFromImage("kugelButton", "resources/Buttons/kugelButton.png");
 	kugelButton.setVisibility(true);
 	kugelButton.setCoordinateSystemID(9);
-	kugelButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	kugelButton.setTranslation(setPosition(kugelButton, 300, 150, 50));
+	kugelButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+	kugelButton.setTranslation(setPosition(kugelButton, 1200, 180, 30));
 	arel.Scene.addObject(kugelButton);
+
+	domButton = arel.Object.Model3D.createFromImage("domButton", "resources/Buttons/domButton.png");
+	domButton.setVisibility(true);
+	domButton.setCoordinateSystemID(9);
+	domButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+	domButton.setTranslation(setPosition(domButton, 350, 320, 30));
+	arel.Scene.addObject(domButton);
+
+	humansButton = arel.Object.Model3D.createFromImage("humansButton", "resources/Buttons/humansButton.png");
+	humansButton.setVisibility(true);
+	humansButton.setCoordinateSystemID(9);
+	humansButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	humansButton.setTranslation(setPosition(humansButton, -900, -50, 30));
+	arel.Scene.addObject(humansButton);
+
+	hintText = arel.Object.Model3D.createFromImage("hintText", "resources/Text/different_text.png");
+	hintText.setVisibility(true);
+	hintText.setCoordinateSystemID(9);
+	hintText.setScale(new arel.Vector3D(2.0,2.0,2.0));
+	hintText.setTranslation(setPosition(hintText, 0, -400, 100));
+	arel.Scene.addObject(hintText);
+
+
+	// Dumler Objekte COS: 10
 
 	// Plexiglasplasik Objects COS:3
 	// models

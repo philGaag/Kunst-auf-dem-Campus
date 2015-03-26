@@ -74,8 +74,6 @@ setObjectRotation = function(x, y, z){
 playVideo = function(type){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		arel.Media.startVideo("http://philg.avior.uberspace.de/Video/test.mp4");
-		// which is nicer?
-		// arel.Media.openWebsite("https://www.youtube.com/watch?v=7b2f2kpTVao");
 	}
 };
 setCOS = function(id){
@@ -101,6 +99,7 @@ trackingHandler = function(type, param){
 				galleryButton.setCoordinateSystemID(1);
 				galleryButton.setVisibility(true);
 
+				// Things to be defined in here
 				// set the texts for artistText
 				// set the text for informationText
 				// close button position is set in the click handler B)

@@ -34,7 +34,7 @@ arel.sceneReady(function(){
 	arel.Events.setListener(arel.Scene.getObject("kugelButton"),function(obj, type, params){handleSound(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("domButton"),function(obj, type, params){handleSound(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("humansButton"),function(obj, type, params){handleSound(obj, type, params);});
-	arel.Events.setListener(arel.Scene.getObject("closeButton"),function(obj, type, params){closeItem(obj, type, params, textItem, activeObject);});
+	arel.Events.setListener(arel.Scene.getObject("closeButton"),function(obj, type, params){closeItem(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("plexiglasLayerButton"),function(obj, type, params){openNumberButtons(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberOne"),function(obj, type, params){handleLayers(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberTwo"),function(obj, type, params){handleLayers(obj, type, params);});
@@ -263,7 +263,7 @@ handleSound = function(obj, type, params){
 };
 
 /*ACTIVE OBJECT CAN BE REMOVED?*/
-closeItem = function(obj, type, params, activeObject){
+closeItem = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		obj.setVisibility(false);
 		activeObject.setVisibility(false);
@@ -280,9 +280,9 @@ changeChannel = function(){
 showHelp = function(){
 	// arel.Media.openWebsite(EXTERNAL PAGE WITH INFO ON IT);
 };
-smoothIn = function(){
-	interval = setInterval(function(){ smoothingLogic() }, 1000);
-};
+// smoothIn = function(){
+// 	interal = setInterval(function(){ smoothingLogic() }, 1000);
+// };
 showAllButotns = function(){
 	informationButton.setVisibility(true);
 	galleryButton.setVisibility(true);

@@ -185,17 +185,17 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, -200, 20));
+				closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -200, 0, 20));
 				informationButton.setTranslation(setPosition(informationButton, 0, 0, 20));
-				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
-				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				artistProfileButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+				informationButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 				//Gallery
 				dumlerGallery = true;
 				galleryButton.setCoordinateSystemID(7);
 				galleryButton.setVisibility(true);
-				galleryButton.setTranslation(setPosition(galleryButton, 0, 200, 20));
-				galleryButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
+				galleryButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 			}
 			// Leber
 			if(param[0].getCoordinateSystemID() == 8){

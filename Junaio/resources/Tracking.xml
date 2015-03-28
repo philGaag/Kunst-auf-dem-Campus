@@ -62,7 +62,7 @@
             <SensorCOS>
                 <SensorCosID>Leber</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2336" heightMM="4160">LeberTrackable.jpg</referenceImage>
+                    <referenceImage widthMM="1036" heightMM="525">LeberTrackable.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
 

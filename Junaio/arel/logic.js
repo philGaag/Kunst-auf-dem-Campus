@@ -49,7 +49,7 @@ openImageGallery = function(obj, type, params){
 		if(dumlerGallery){
 			arel.Media.openWebsite("http://homepages.uni-regensburg.de/~knb07554/DumlerGalerie/gallery.html");
 		}else{
-			arel.Media.openWebsite(/*"BIANCA HIER BITTE LINK ZUR LEBER GALLERIE EINFÜGEN"*/);
+			arel.Media.openWebsite("http://homepages.uni-regensburg.de/~knb07554/LeberGalerie/gallery.html");
 		}
 	}
 };
@@ -146,10 +146,11 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, -15, 50, 50));
-				informationButton.setTranslation(setPosition(informationButton, -15, 50, 50));
-				artistProfileButton.setScale(new arel.Vector3D(0.7,0.7,0.7));
-				informationButton.setScale(new arel.Vector3D(0.7,0.7,0.7));
+				closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, 50));
+				informationButton.setTranslation(setPosition(informationButton, -60, 180, 50));
+				artistProfileButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+				informationButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 			}
 			// Dumler
 			if(param[0].getCoordinateSystemID() == 7){
@@ -159,10 +160,17 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
+				closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, -200, 20));
 				informationButton.setTranslation(setPosition(informationButton, 0, 0, 20));
 				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				//Gallery
+				dumlerGallery = true;
+				galleryButton.setCoordinateSystemID(7);
+				galleryButton.setVisibility(true);
+				galleryButton.setTranslation(setPosition(galleryButton, 0, 200, 20));
+				galleryButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
 			}
 			// Leber
 			if(param[0].getCoordinateSystemID() == 8){
@@ -172,13 +180,18 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, -200, 20));
-				informationButton.setTranslation(setPosition(informationButton, 0, -200, 20));
-				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
-				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
-				// boolean für gallery abfangen!
-				// BEI DUMLER TRACKABLE TRUE SETZEN!
+				closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -250, -300, 20));
+				informationButton.setTranslation(setPosition(informationButton, 0, -300, 20));
+				artistProfileButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+				informationButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+				//Gallery
 				dumlerGallery = false;
+				galleryButton.setCoordinateSystemID(8);
+				galleryButton.setVisibility(true);
+				galleryButton.setTranslation(setPosition(galleryButton, 250, -300, 20));
+				galleryButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+
 			}
 
 			// Numa
@@ -189,10 +202,11 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 350, 20));
-				informationButton.setTranslation(setPosition(informationButton, -400, 350, 20));
-				artistProfileButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
-				informationButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
+				closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, 20));
+				informationButton.setTranslation(setPosition(informationButton, -180, 850, 20));
+				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 			}
 
 		}

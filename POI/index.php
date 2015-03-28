@@ -8,7 +8,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.988184, 12.091618, 0), //location
 		"/resources/Traumlandschaft.jpg", //thumb
 		"/resources/Traumlandschaft.jpg", //icon
-		"Otmaer Alt\nPatientenbereich Zahnklinik\nFarbig beschichtete Platten mit bunten teils mechanischen Stahlkonstruktionen", //description
+		"Otmaer Alt, 1983\nPatientenbereich Zahnklinik\nFarbig beschichtete Platten mit bunten teils mechanischen Stahlkonstruktionen. Der Künstler eröffnet dem Betrachter vom Wartebereich aus einen Einblick in seine lebhaften Kosmos, in dem sich Pflanzliches, Tierisches und Menschliches zu einer phantastischen, neuen Welt zusammenfinden.", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -41,7 +41,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.987712, 12.090749, 0), //location
 		"/resources/KapelleKlinik.jpg", //thumb
 		"/resources/KapelleKlinik.jpg", //icon
-		"Blasius Gerg\nKapelle Universitaetklinikum\nbestehend aus einem Tabernakel, einem Vortragekreuz, Sedilien, dem Altar, Ambo und einem Weihwasserbecken", //description
+		"Blasius Gerg, 1992\nKapelle Universitaetklinikum\nbestehend aus einem Tabernakel, einem Vortragekreuz, Sedilien, dem Altar, Ambo und einem Weihwasserbecken. Der Künstler gestaltete auch den Brunne im Gebäudekomplex Philosophie/Theologie, das Einlaufbecken am See des Forums und die Sonnenuhr im Außenbereich des Uniklinikums.", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -63,7 +63,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.985982, 12.089639, 0), //location
 		"/resources/HommageKepler.jpg", //thumb
 		"/resources/HommageKepler.jpg", //icon
-		"Elmar Göppl\nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
+		"Elmar Göppl, 1998\nAußenbereich südliches Arial Uniklinikum\nEines von drei Stahlplastiken", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -74,7 +74,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.986647, 12.089754, 0), //location
 		"/resources/HommageKepler.jpg", //thumb
 		"/resources/HommageKepler.jpg", //icon
-		"Elmar Göppl \nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
+		"Elmar Göppl, 1998\nAußenbereich südliches Arial Uniklinikum\nEines von drei Stahlplastiken", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -85,7 +85,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.985973, 12.090741, 0), //location
 		"/resources/HommageKepler.jpg", //thumb
 		"/resources/HommageKepler.jpg", //icon
-		"Elmar Göppl \nAußenbereich sündliches Arial\nEines von drei Stahlplastiken", //description
+		"Elmar Göppl, 1998\nAußenbereich südliches Arial Uniklinikum\nEines von drei Stahlplastiken", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -96,7 +96,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.99409, 12.09419, 0), //location
 		"/resources/Adam_und_Eva.jpg", //thumb
 		"/resources/Adam_und_Eva.jpg", //icon
-		"HAP Grieshaber;1970\nHolzschnitt\nim Treppenhaus der Biologischen Fakultät", //description
+		"HAP Grieshaber, 1970\nim Treppenhaus der Biologischen Fakultät\nGrieshabers Adam und Eva ist eine Kopie des originalen Holzschnitts.", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -107,7 +107,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.9878596, 12.0915968, 0), //location
 		"/resources/Landschaftsprojektionen.jpg", //thumb
 		"/resources/Landschaftsprojektionen.jpg", //icon
-		"Eckard Hauser\nWartebereich Zahnklinik\n14 bewegliche Elemente, welche eine idyllische Landschaft zeigen.", //description
+		"Eckard Hauser, 1982\nWartebereich Zahnklinik\n14 bewegliche Elemente, welche eine idyllische Landschaft zeigen.", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -162,7 +162,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.998508, 12.094622, 0), //location
 		"/resources/WegZumMotiv.jpg", //thumb
 		"/resources/WegZumMotiv.jpg", //icon
-		"H. Leber;2007\nan den Wänden des Zentralen Hörsaalgebäude\nAcryl und Kohle", //description
+		"Hermann Leber, 2007\nan den Wänden des Zentralen Hörsaalgebäude bei H10\nAcryl und Kohle", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -195,7 +195,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.986672, 12.090312, 0), //location
 		"/resources/Komposition.jpg", //thumb
 		"/resources/Komposition.jpg", //icon
-		"Heiner Riepl\nErdgeschoss\nÖl auf Leinwand", //description
+		"Heiner Riepl, 1989\nErdgeschoss Universitätsklinikum\nÖl auf Leinwand", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);
@@ -206,7 +206,7 @@ $oObject = ArelXMLHelper::createLocationBasedPOI(
 		array(48.988006, 12.088281, 0), //location
 		"/resources/Hockende.jpg", //thumb
 		"/resources/Hockende.jpg", //icon
-		"Wilhelm Uhlig\nAtrium der Physikalischen Therapie\nBrunnenanlage mit Bronzeskulptur", //description
+		"Wilhelm Uhlig, 1986\nAtrium der Physikalischen Therapie\nBrunnenanlage mit Bronzeskulptur, auf die sich alle Raumachsen beziehen.", //description
 		array()
 	);
 ArelXMLHelper::outputObject($oObject);

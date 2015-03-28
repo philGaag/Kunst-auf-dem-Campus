@@ -163,6 +163,7 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(6);
+				$("#toastText").text("Gemeinsamkeiten der Gemälde sind Rot eingekreist");
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
@@ -179,6 +180,7 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(7);
+				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
@@ -201,6 +203,7 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(8);
+				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
@@ -225,6 +228,7 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(9);
+				$("#toastText").text("Klicke auf die Elemente um Audio-Infos zu ihnen zu erhalten");
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";

@@ -19,6 +19,7 @@ var artistProfileButton,
 	layerNumberThreeActive = true,
 	activeObject,
 	youTubeButton,
+	plexiModelIsVisible = false,
 	dumlerGallery = false;
 
 arel.sceneReady(function(){
@@ -261,29 +262,25 @@ handleSound = function(obj, type, params){
 
     }
 };
-
-/*ACTIVE OBJECT CAN BE REMOVED?*/
 closeItem = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		if(plexiModelIsVisible){
+			closePlexiModel();
+		}else{
+			activeObject.setVisibility(false);
+			activeObject.setTexture("resources/Text/empty.png");
+		}
 		obj.setVisibility(false);
-		activeObject.setVisibility(false);
-		activeObject.setTexture("resources/Text/empty.png");
-		showAllButotns();
+		showAllButtons();
 	}
 };
-// setText = function (obj, replacementText){
-// 	textItem.setTexture(replacementText);
-// };
 changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
 showHelp = function(){
 	// arel.Media.openWebsite(EXTERNAL PAGE WITH INFO ON IT);
 };
-// smoothIn = function(){
-// 	interal = setInterval(function(){ smoothingLogic() }, 1000);
-// };
-showAllButotns = function(){
+showAllButtons = function(){
 	informationButton.setVisibility(true);
 	galleryButton.setVisibility(true);
 	artistProfileButton.setVisibility(true);
@@ -302,7 +299,7 @@ stopLoadingScreen = function(){
 };
 openNumberButtons = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
-		$("#toastText").text("Please work you beauty");
+		// $("#toastText").text("Please work you beauty");
 		plexiglasLayerButton.setVisibility(false);
 		layerNumberOne.setVisibility(true);
 		layerNumberTwo.setVisibility(true);
@@ -313,6 +310,9 @@ openNumberButtons = function(obj, type, params){
 
 		artistProfileButton.setVisibility(false);
 		informationButton.setVisibility(false);
+
+		plexiModelIsVisible = true;
+		closeButton.setVisibility(true);
 	}
 };
 handleLayers = function(obj, type, params){
@@ -353,6 +353,17 @@ handleLayers = function(obj, type, params){
 			break;
 		}
 	}
+};
+closePlexiModel = function(){
+	$("#toastText").text("Please work you beauty");
+	layerNumberOne.setVisibility(false);
+	layerNumberTwo.setVisibility(false);
+	layerNumberThree.setVisibility(false);
+	plexiObjectLevelOne.setVisibility(false);
+	plexiObjectLevelTwo.setVisibility(false);
+	plexiObjectLevelThree.setVisibility(false);
+	plexiglasLayerButton.setVisibility(true);
+	plexiModelIsVisible = false;
 };
 function initialiseObjects(){
 	// ***************************************************************************************

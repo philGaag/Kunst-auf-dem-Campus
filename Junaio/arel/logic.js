@@ -19,6 +19,7 @@ var artistProfileButton,
 	layerNumberThreeActive = true,
 	activeObject,
 	youTubeButton,
+	tempCOSID,
 	plexiModelIsVisible = false,
 	dumlerGallery = false;
 
@@ -77,10 +78,21 @@ playVideo = function(type){
 		arel.Media.startVideo("http://philg.avior.uberspace.de/Video/test.mp4");
 	}
 };
+hideThings = function(){
+	artistTextObject.setVisibility(false);
+	informationTextObject.setVisibility(false);
+	closeButton.setVisibility(false);
+	closePlexiModel();
+};
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
 	informationButton.setCoordinateSystemID(id);
 	closeButton.setCoordinateSystemID(id);
+};
+checkTrackingChanged = function(id){
+	if (tempCOSID != id) {
+		hideThings();
+	};
 };
 trackingHandler = function(type, param){
 	//check if there is tracking information available
@@ -91,6 +103,8 @@ trackingHandler = function(type, param){
 		{
 			// Awesome Face
 			if(param[0].getCoordinateSystemID() == 1){
+				// checkTrackingChanged();
+				// tempCOSID = 1;
 				hideHtmlStuff();
 				setCOS(1);
 				artistText = "resources/Text/plexitext.jpg";
@@ -109,6 +123,8 @@ trackingHandler = function(type, param){
 			}
 			// Kapelle
 			if(param[0].getCoordinateSystemID() == 2){
+				// tempCOSID = 2;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(2);
 				// define the text for the standard buttons
@@ -117,6 +133,8 @@ trackingHandler = function(type, param){
 			}
 			// Plexiglas
 			if(param[0].getCoordinateSystemID() == 3){
+				// tempCOSID = 3;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(3);
 				artistText = "resources/Text/plexiglas_plastik.png";
@@ -129,17 +147,23 @@ trackingHandler = function(type, param){
 			}
 			// Wandteppich links
 			if(param[0].getCoordinateSystemID() == 4){
+				// tempCOSID = 4;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(4);
 				// play vid
 			}
 			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
+				// tempCOSID = 5;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(5);
 			}
 			// Adam & Eva
 			if(param[0].getCoordinateSystemID() == 6){
+				// tempCOSID = 6;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(6);
 				// define the text for the standard buttons
@@ -153,6 +177,8 @@ trackingHandler = function(type, param){
 			}
 			// Dumler
 			if(param[0].getCoordinateSystemID() == 7){
+				// tempCOSID = 7;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(7);
 				// define the text for the standard buttons
@@ -166,6 +192,8 @@ trackingHandler = function(type, param){
 			}
 			// Leber
 			if(param[0].getCoordinateSystemID() == 8){
+				// tempCOSID = 8;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(8);
 				// define the text for the standard buttons
@@ -183,6 +211,8 @@ trackingHandler = function(type, param){
 
 			// Numa
 			if(param[0].getCoordinateSystemID() == 9){
+				// tempCOSID = 9;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(9);
 				// define the text for the standard buttons

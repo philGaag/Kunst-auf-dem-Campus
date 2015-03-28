@@ -103,8 +103,8 @@ trackingHandler = function(type, param){
 		{
 			// Awesome Face
 			if(param[0].getCoordinateSystemID() == 1){
-				// checkTrackingChanged();
 				// tempCOSID = 1;
+				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(1);
 				artistText = "resources/Text/plexitext.jpg";
@@ -128,8 +128,8 @@ trackingHandler = function(type, param){
 				hideHtmlStuff();
 				setCOS(2);
 				// define the text for the standard buttons
-				artistText = "resources/Text/plexitext.jpg";
-				informationText = "resources/Text/gollwitz.png";
+				// artistText = "resources/Text/jonesText.png";
+				// informationText = "resources/Text/kapellenFenster.png";
 			}
 			// Plexiglas
 			if(param[0].getCoordinateSystemID() == 3){
@@ -137,12 +137,8 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(3);
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
-
-				// layerNumberOne.setTranslation(setPosition(layerNumberOne, 100,100,20));
-				// layerNumberTwo.setTranslation(setPosition(layerNumberOne, 100,100,20));
-				// layerNumberThree.setTranslation(setPosition(layerNumberOne, 100,100,20));
+				// artistText = "resources/Text/gollwitzText.png";
+				// informationText = "resources/Text/plexiglasText.png";
 
 			}
 			// Wandteppich links
@@ -151,8 +147,9 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				hideHtmlStuff();
 				setCOS(4);
-				// play vid
-			}
+				// artistText = "resources/Text/ittenText.png";
+				// informationText = "resources/Text/teppichText.png";
+			};
 			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
 				// tempCOSID = 5;
@@ -322,7 +319,7 @@ changeChannel = function(){
 	arel.Scene.switchChannel(383691);
 }; 
 showHelp = function(){
-	// arel.Media.openWebsite(EXTERNAL PAGE WITH INFO ON IT);
+	arel.Media.openWebsite("http://philg.avior.uberspace.de/helpText/index.html");
 };
 showAllButtons = function(){
 	informationButton.setVisibility(true);

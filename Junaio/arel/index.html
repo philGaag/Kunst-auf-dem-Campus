@@ -136,15 +136,18 @@
             width: 100%;
             bottom: 0;
             left: 0;
-            height: 50px;
-            /*background-color: green;*/
+            height: 60px;
         }
         #toastText{
             margin-left: auto;
             margin-right: auto;
-            width: 80%;
-            height: 50px;
+            width: 85%;
+            /*height: 50px;*/
             text-align: center;
+            color: white;
+            border-radius: 10px;
+            display: none;
+            background-color: rgba(255,255,255,.3);
         }
   		</style>
   		
@@ -156,7 +159,7 @@
             <img id="help_btn" onclick="showHelp()"src="../resources/Buttons/help.png">
         </div>
 		<div id="center">
-			<div id="info">Bitte stellen Sie sich direkt vor das Kunstwerk um es zu scannen!</div>
+			<!-- <div id="info">Bitte stellen Sie sich direkt vor das Kunstwerk um es zu scannen!</div> -->
             
             <div id="loading_box">
                 <div id="loading_text">LOADING</div>
@@ -168,7 +171,5 @@
         <div id="toastBox">
             <div id="toastText"></div>
         </div>
-
-        <!-- <div id="winning">Tracking!</div>		 -->
 	</body>            
 </html>

@@ -84,9 +84,18 @@ hideThings = function(){
 	closeButton.setVisibility(false);
 	closePlexiModel();
 };
+handleToast = function(){
+	$("#toastText").fadeIn(500, function(){
+		setTimeout(function(){
+			$("#toastText").fadeOut( "slow" );
+		},5000);
+	});
+};
 setCOS = function(id){
 	artistProfileButton.setCoordinateSystemID(id);
 	informationButton.setCoordinateSystemID(id);
+	artistTextObject.setCoordinateSystemID(id);
+	informationTextObject.setCoordinateSystemID(id);
 	closeButton.setCoordinateSystemID(id);
 };
 checkTrackingChanged = function(id){
@@ -105,19 +114,17 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 1){
 				// tempCOSID = 1;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(1);
 				artistText = "resources/Text/plexitext.jpg";
 				informationText = "resources/Text/gollwitz.png";
-				artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
-				dumlerGallery = true;
-				galleryButton.setCoordinateSystemID(1);
-				galleryButton.setVisibility(true);
-
+				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
+				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
+				$("#toastText").text("Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden!");
+				handleToast();
 				// Things to be defined in here
 				// set the texts for artistText
 				// set the text for informationText
-				// close button position is set in the click handler B)
 				// set the translation of artistTextObject
 				// set the translation of informationTextObject
 			}
@@ -125,37 +132,93 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 2){
 				// tempCOSID = 2;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(2);
-				// define the text for the standard buttons
+				// TEXT TEXTURE
 				// artistText = "resources/Text/jonesText.png";
 				// informationText = "resources/Text/kapellenFenster.png";
+
+				// TEXT POSITION
+				// artistTextObject.setPosition(artistTextObject, 100,100,20);
+				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
+
+				// TEXT SCALE
+				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+
+				// BUTTON POSITION
+				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
+				// informationButton.setPosition(informationButton, 200, 100, 20);
+
+				// BUTTON SCALE
+				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+
 			}
 			// Plexiglas
 			if(param[0].getCoordinateSystemID() == 3){
 				// tempCOSID = 3;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(3);
+				// TEXT TEXTURE
 				// artistText = "resources/Text/gollwitzText.png";
 				// informationText = "resources/Text/plexiglasText.png";
+
+				// TEXT POSITION
+				// artistTextObject.setPosition(artistTextObject, 100,100,20);
+				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
+
+				// TEXT SCALE
+				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+
+				// BUTTON POSITION
+				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
+				// informationButton.setPosition(informationButton, 200, 100, 20);
+				// plexiglasLayerButton.setPosition(plexiglasLayerButton, 200, 100, 20);
+				
+				// BUTTON SCALE
+				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// plexiglasLayerButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
 
 			}
 			// Wandteppich links
 			if(param[0].getCoordinateSystemID() == 4){
 				// tempCOSID = 4;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(4);
+				// TEXT TEXTURE
 				// artistText = "resources/Text/ittenText.png";
 				// informationText = "resources/Text/teppichText.png";
+
+				// TEXT POSITION
+				// artistTextObject.setPosition(artistTextObject, 100,100,20);
+				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
+
+				// TEXT SCALE
+				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+
+				// BUTTON POSITION
+				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
+				// informationButton.setPosition(informationButton, 200, 100, 20);
+
+				// BUTTON SCALE
+				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+
 			};
 			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
 				// tempCOSID = 5;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(5);
+				// TOAST 'Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden '
+				youTubeButton.setVisibility(true);
 			}
 			// Adam & Eva
 			if(param[0].getCoordinateSystemID() == 6){
@@ -178,7 +241,7 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 7){
 				// tempCOSID = 7;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(7);
 				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
 				// define the text for the standard buttons
@@ -201,7 +264,7 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 8){
 				// tempCOSID = 8;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(8);
 				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
 				// define the text for the standard buttons
@@ -226,7 +289,7 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 9){
 				// tempCOSID = 9;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(9);
 				$("#toastText").text("Klicke auf die Elemente um Audio-Infos zu ihnen zu erhalten");
 				// define the text for the standard buttons
@@ -244,7 +307,7 @@ trackingHandler = function(type, param){
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
 		else if(type && type == arel.Events.Scene.ONTRACKING && param[0].getState() == arel.Tracking.STATE_NOTTRACKING)
 		{
-			showHtmlStuff();
+			// showHtmlStuff();
 		}
 	}
 };
@@ -330,14 +393,14 @@ showAllButtons = function(){
 	galleryButton.setVisibility(true);
 	artistProfileButton.setVisibility(true);
 };
-hideHtmlStuff = function(){
-	$('#info').hide();
-	$('#winning').show();
-};
-showHtmlStuff = function(){
-	$('#info').show();
-	$('#winning').hide();
-};
+// hideHtmlStuff = function(){
+// 	$('#info').hide();
+// 	$('#winning').show();
+// };
+// showHtmlStuff = function(){
+// 	$('#info').show();
+// 	$('#winning').hide();
+// };
 stopLoadingScreen = function(){
 	$(".star").css('-webkit-animation-play-state' , 'paused');
 	$("#loading_box").hide();

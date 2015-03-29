@@ -63,7 +63,7 @@ setPosition = function(target, x, y, z){
 };
 setCloseButton = function(target){
 	position = target.getTranslation();
-	position.setX(position.getX() + 400);
+	position.setX(position.getX() + 350);
     position.setY(position.getY() + 500);
     position.setZ(position.getZ() + 25);
     return position;
@@ -116,8 +116,8 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				// hideHtmlStuff();
 				setCOS(1);
-				artistText = "resources/Text/plexitext.jpg";
-				informationText = "resources/Text/gollwitz.png";
+				artistText = "resources/Text/all_texts.png";
+				informationText = "resources/Text/op45percent.png";
 				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
 				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
 				$("#toastText").text("Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden!");
@@ -648,4 +648,12 @@ function initialiseObjects(){
 	youTubeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	youTubeButton.setTranslation(setPosition(youTubeButton, 100, 50, 20));
 	arel.Scene.addObject(youTubeButton);
+
+	// kapelle
+	kepellen_lines = arel.Object.Model3D.createFromImage("kepellen_lines", "resources/Kapelle/lines.png");
+	kepellen_lines.setVisibility(true);
+	kepellen_lines.setCoordinateSystemID(1);
+	kepellen_lines.setScale(new arel.Vector3D(5.0,5.0,5.0));
+	kepellen_lines.setTranslation(setPosition(kepellen_lines, 0, 0, 20));
+	arel.Scene.addObject(kepellen_lines);
 };

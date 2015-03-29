@@ -69,7 +69,7 @@
             <SensorCOS>
                 <SensorCosID>Numa</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="1328" heightMM="1323">Numaklein.jpg</referenceImage>
+                    <referenceImage widthMM="664" heightMM="662">Numaklein.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
 

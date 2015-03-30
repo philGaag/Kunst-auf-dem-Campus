@@ -116,8 +116,8 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				// hideHtmlStuff();
 				setCOS(1);
-				artistText = "resources/Text/all_texts.png";
-				informationText = "resources/Text/op45percent.png";
+				artistText = "resources/Text/itten_text.png";
+				informationText = "resources/Text/teppich_text.png";
 				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
 				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
 				$("#toastText").text("Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden!");
@@ -133,6 +133,7 @@ trackingHandler = function(type, param){
 				// tempCOSID = 2;
 				// checkTrackingChanged();
 				// hideHtmlStuff();
+				$('#toastText').text('Kapelle');
 				setCOS(2);
 				// TEXT TEXTURE
 				// artistText = "resources/Text/jonesText.png";
@@ -159,66 +160,41 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 3){
 				// tempCOSID = 3;
 				// checkTrackingChanged();
+				$('#toastText').text('Plexiglas');
 				// hideHtmlStuff();
 				setCOS(3);
-				// TEXT TEXTURE
-				// artistText = "resources/Text/gollwitzText.png";
-				// informationText = "resources/Text/plexiglasText.png";
-
-				// TEXT POSITION
-				// artistTextObject.setPosition(artistTextObject, 100,100,20);
-				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
-
-				// TEXT SCALE
-				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
-
-				// BUTTON POSITION
-				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
-				// informationButton.setPosition(informationButton, 200, 100, 20);
-				// plexiglasLayerButton.setPosition(plexiglasLayerButton, 200, 100, 20);
-				
-				// BUTTON SCALE
-				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// plexiglasLayerButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
-
 			}
 			// Wandteppich links
 			if(param[0].getCoordinateSystemID() == 4){
+				$('#toastText').text('Drücke auf den YouTube Knopf um ein Video zu sehen wie solche Teppiche gewebt werden.');
+				handleToast();
 				// tempCOSID = 4;
 				// checkTrackingChanged();
 				// hideHtmlStuff();
-				setCOS(4);
-				// TEXT TEXTURE
-				// artistText = "resources/Text/ittenText.png";
-				// informationText = "resources/Text/teppichText.png";
-
-				// TEXT POSITION
-				// artistTextObject.setPosition(artistTextObject, 100,100,20);
-				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
-
-				// TEXT SCALE
-				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
-
-				// BUTTON POSITION
-				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
-				// informationButton.setPosition(informationButton, 200, 100, 20);
-
-				// BUTTON SCALE
-				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
 
 			};
 			// Wandteppich rechts
 			if(param[0].getCoordinateSystemID() == 5){
+				$('#toastText').text('Halte dein Smartphone auf den anderen Teppich um ein Video zu sehen.');
+				handleToast();
 				// tempCOSID = 5;
 				// checkTrackingChanged();
 				// hideHtmlStuff();
 				setCOS(5);
-				// TOAST 'Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden '
-				youTubeButton.setVisibility(true);
+				// TEXT TEXTURE
+				artistText = "resources/Text/itten_text.png";
+				informationText = "resources/Text/teppich_text.png";
+				// TEXT SCALE
+				artistTextObject.setScale(new arel.Vector3D(30.0, 30.0, 30.0));
+				informationTextObject.setScale(new arel.Vector3D(30.0, 30.0, 30.0));
+				closeButton.setScale(new arel.Vector3D(5.0, 5.0, 5.0));
+				closeButton.setTranslation(setPosition(closeButton, 1300, 1700, 25));
+				// BUTTON POSITION
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -100, -200, 20));
+				informationButton.setTranslation(setPosition(informationButton, 300, -200, 20));
+				// BUTTON SCALE
+				artistProfileButton.setScale(new arel.Vector3D(3.0, 3.0, 3.0));
+				informationButton.setScale(new arel.Vector3D(3.0, 3.0, 3.0));
 			}
 			// Adam & Eva
 			if(param[0].getCoordinateSystemID() == 6){
@@ -325,7 +301,7 @@ displayText = function(obj, type, params, itemToOpen){
     			artistTextObject.setTexture(artistText);
     			artistTextObject.setVisibility(true);
     			activeObject = artistTextObject;
-				closeButton.setTranslation(setCloseButton(artistTextObject)); 
+				// closeButton.setTranslation(setCloseButton(artistTextObject)); 
     		break;
 
     		case informationButton: 
@@ -335,7 +311,7 @@ displayText = function(obj, type, params, itemToOpen){
     			informationTextObject.setVisibility(true);
     			activeObject = informationTextObject;
     			// redundant?
-				closeButton.setTranslation(setCloseButton(informationTextObject)); 
+				// closeButton.setTranslation(setCloseButton(informationTextObject)); 
     		break;
     	}
     	closeButton.setParent(itemToOpen);
@@ -644,9 +620,9 @@ function initialiseObjects(){
 	// Wandteppich objects
 	youTubeButton = arel.Object.Model3D.createFromImage("youTubeButton", "resources/Buttons/youtube.png");
 	youTubeButton.setVisibility(true);
-	youTubeButton.setCoordinateSystemID(1);
-	youTubeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-	youTubeButton.setTranslation(setPosition(youTubeButton, 100, 50, 20));
+	youTubeButton.setCoordinateSystemID(4);
+	youTubeButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+	youTubeButton.setTranslation(setPosition(youTubeButton, 0, -300, 20));
 	arel.Scene.addObject(youTubeButton);
 
 	// kapelle

@@ -19,7 +19,7 @@
             <SensorCOS>
                 <SensorCosID>KapellenFenster</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2448" heightMM="3264">kapellenFenster.jpg</referenceImage>
+                    <referenceImage widthMM="1224" heightMM="1632">kapelle_small.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
             </SensorCOS>

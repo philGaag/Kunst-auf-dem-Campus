@@ -227,9 +227,10 @@ trackingHandler = function(type, param){
 				hideHtmlStuff();
 				setCOS(6);
 				$("#toastText").text("Gemeinsamkeiten der Gemälde sind Rot eingekreist");
+				handleToast();
 				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
+				artistText = "resources/Text/grieshaber.png";
+				informationText = "resources/Text/adam_eva_text.png";
 				//set Position and Scale for standard buttons
 				closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, 50));
@@ -244,6 +245,7 @@ trackingHandler = function(type, param){
 				// hideHtmlStuff();
 				setCOS(7);
 				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
+				handleToast();
 				// define the text for the standard buttons
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
@@ -267,9 +269,10 @@ trackingHandler = function(type, param){
 				// hideHtmlStuff();
 				setCOS(8);
 				$("#toastText").text("Zur Bildergalerie auf den rechten Button tippen");
+				handleToast();
 				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
+				artistText = "resources/Text/leber_text.png";
+				informationText = "resources/Text/motiv_text.png";
 				//set Position and Scale for standard buttons
 				closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, -250, -300, 20));
@@ -292,9 +295,10 @@ trackingHandler = function(type, param){
 				// hideHtmlStuff();
 				setCOS(9);
 				$("#toastText").text("Klicke auf die Elemente um Audio-Infos zu ihnen zu erhalten");
+				handleToast();
 				// define the text for the standard buttons
-				artistText = "resources/Text/plexiglas_plastik.png";
-				informationText = "resources/Text/different_text.png";
+				artistText = "resources/Text/numa_text.png";
+				informationText = "resources/Text/gemaelde_text.png";
 				//set Position and Scale for standard buttons
 				closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, 20));

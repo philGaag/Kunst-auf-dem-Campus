@@ -9,36 +9,72 @@
                     <MultipleReferenceImagesFast>3</MultipleReferenceImagesFast>
                 </FeatureBasedParameters>
             </Parameters>
+
             <SensorCOS>
-                <SensorCosID>1__d9160576db07d8c8f7d163e8231b9949</SensorCosID>
-                <Parameters>
-                    <referenceImage widthMM="2448" heightMM="3264">aaa.jpg</referenceImage>
-                </Parameters>
-            </SensorCOS>
-            <SensorCOS>
-                <SensorCosID>2__ec70081e78559bfba368edb4a00dc008</SensorCosID>
+                <SensorCosID>awesomeFace</SensorCosID>
                 <Parameters>
                     <referenceImage widthMM="200" heightMM="200">awesome-face.png</referenceImage>
                 </Parameters>
-            </SensorCOS>
+
             <SensorCOS>
-                <SensorCosID>elephant</SensorCosID>
+                <SensorCosID>KapellenFenster</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2448" heightMM="3264">Kunst.jpg</referenceImage>
+                    <referenceImage widthMM="2448" heightMM="3264">kapellenFenster.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
+            </SensorCOS>
+
             <SensorCOS>
-                <SensorCosID>android</SensorCosID>
+                <SensorCosID>Plexiglas</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="512" heightMM="512">android.png</referenceImage>
+                    <referenceImage widthMM="2094" heightMM="2448">plexi.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
+
             <SensorCOS>
-                <SensorCosID>burton</SensorCosID>
+                <SensorCosID>Wandteppich_Links</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="439" heightMM="526">burton.png</referenceImage>
+                    <referenceImage widthMM="2448" heightMM="3264">wandteppich_links.png</referenceImage>
                 </Parameters>
             </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>Wandteppich_Rechts</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="2094" heightMM="2448">wandteppich_rechts.png</referenceImage>
+                </Parameters>
+            </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>AdamEva</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="350" heightMM="374">AdamEva.jpg</referenceImage>
+                </Parameters>
+            </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>Dumler</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="572" heightMM="323">dumlerTrackable.jpg</referenceImage>
+                </Parameters>
+            </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>Leber</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="1036" heightMM="525">LeberTrackable.jpg</referenceImage>
+                </Parameters>
+            </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>Numa</SensorCosID>
+                <Parameters>
+                    <referenceImage widthMM="664" heightMM="662">Numaklein.jpg</referenceImage>
+                </Parameters>
+            </SensorCOS>
+
+
+
         </Sensor>
     </Sensors>
     <Connections>
@@ -55,7 +91,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>1__d9160576db07d8c8f7d163e8231b9949</SensorCosID>
+                <SensorCosID>awesomeFace</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -71,7 +107,7 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>0</x>
+                        <x>68.75</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>
@@ -97,7 +133,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>2__ec70081e78559bfba368edb4a00dc008</SensorCosID>
+                <SensorCosID>KapellenFenster</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -113,7 +149,7 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>68.75</x>
+                        <x>0</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>
@@ -139,7 +175,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>elephant</SensorCosID>
+                <SensorCosID>Plexiglas</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -168,6 +204,7 @@
                 </COSOffset>
             </SensorSource>
         </COS>
+         
         <COS>
             <Name>COS_4</Name>
             <Fuser type="SmoothingFuser">
@@ -181,7 +218,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>android</SensorCosID>
+                <SensorCosID>Wandteppich_Links</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -197,7 +234,49 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>68.75</x>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+          <COS>
+            <Name>COS_5</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>Wandteppich_Rechts</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>
@@ -211,7 +290,7 @@
             </SensorSource>
         </COS>
         <COS>
-            <Name>COS_5</Name>
+            <Name>COS_6</Name>
             <Fuser type="SmoothingFuser">
                 <Parameters>
                     <AlphaRotation>0.5</AlphaRotation>
@@ -223,7 +302,7 @@
             </Fuser>
             <SensorSource trigger="1">
                 <SensorID>FeatureBasedSensorSource_0</SensorID>
-                <SensorCosID>burton</SensorCosID>
+                <SensorCosID>AdamEva</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0</x>
@@ -239,7 +318,7 @@
                 </HandEyeCalibration>
                 <COSOffset>
                     <TranslationOffset>
-                        <x>68.75</x>
+                        <x>0</x>
                         <y>0</y>
                         <z>0</z>
                     </TranslationOffset>
@@ -252,5 +331,132 @@
                 </COSOffset>
             </SensorSource>
         </COS>
+        <COS>
+            <Name>COS_7</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>Dumler</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+        <COS>
+            <Name>COS_8</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>Leber</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+        <COS>
+            <Name>COS_9</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>Numa</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+       
     </Connections>
 </TrackingData>

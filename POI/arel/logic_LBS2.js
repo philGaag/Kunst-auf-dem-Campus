@@ -16,9 +16,8 @@ function handleCustomPoiEvent(obj, type, param)
 		// $('#info').show();
 	}
 };
-function openHelp(){
-	arel.Media.openWebsite("http://philg.avior.uberspace.de/helpText/index.html");
-};
+
+
 function changeChannel(){
 	arel.Scene.switchChannel(382664);
 };

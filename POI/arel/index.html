@@ -1,10 +1,13 @@
 <html>
     <head>
     	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     	<script type="text/javascript" src="http://dev.junaio.com/arel/js/arel.js"></script>
     	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    	<script type="text/javascript" src="logic_POI.js"></script>
-    	    	
+    	<script type="text/javascript" src="logic_LBS2.js"></script>
+
+
     	<style type="text/css">
 		* {
 			-webkit-highlight:           none;
@@ -25,10 +28,9 @@
             top: 10px;
             left: 10px;
         }
-        .button{
-            width: 50%;
+        #channel_btn{
+            width: 100%;
             height: auto;
-            float: left;
         }
 		
   		</style>
@@ -36,9 +38,8 @@
     	<title>Map</title>
     </head>
 	<body>
-		<div id="button_container">
-            <img id="channel_btn" class="button" onclick="changeChannel()" src="../resources/camera.png">
-            <img id="help_btn" class="button" onclick="openHelp()" src="../resources/camera.png">
+		<div id="button_container" onclick="changeChannel()">
+            <img id="channel_btn" src="camera.png">
         </div>
 	</body>            
 </html>

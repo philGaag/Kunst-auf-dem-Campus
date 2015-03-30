@@ -27,7 +27,7 @@
             <SensorCOS>
                 <SensorCosID>Plexiglas</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="2094" heightMM="2448">plexi_middle.jpg</referenceImage>
+                    <referenceImage widthMM="2094" heightMM="2448">plexiglas.jpg</referenceImage>
                 </Parameters>
             </SensorCOS>
 

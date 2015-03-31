@@ -16,12 +16,12 @@
                     <referenceImage widthMM="200" heightMM="200">awesome-face.png</referenceImage>
                 </Parameters>
 
+            </SensorCOS>
             <SensorCOS>
                 <SensorCosID>KapellenFenster</SensorCosID>
                 <Parameters>
-                    <referenceImage widthMM="1312" heightMM="2488">light.jpg</referenceImage>
+                    <referenceImage widthMM="796" heightMM="1632">kapelle.jpg</referenceImage>
                 </Parameters>
-            </SensorCOS>
             </SensorCOS>
 
             <SensorCOS>

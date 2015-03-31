@@ -138,21 +138,21 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/jones_text.png";
 				informationText = "resources/Text/kapellen_text.png";
 
+				artistProfileButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));
+				informationButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));
+
 				// TEXT POSITION
-				// artistTextObject.setPosition(artistTextObject, 100,100,20);
-				// informationTextObject.setPositioin(informationTextObject, 100,100,20);
+				artistTextObject.setTranslation(setPosition(artistTextObject, 0, 0, 20));
+				informationTextObject.setTranslation(setPositioin(informationTextObject, 0, 0, 20));
 
 				// TEXT SCALE
-				// artistTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationTextObject.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				artistTextObject.setScale(new arel.Vector3D(5.0, 5.0, 5.0));
+				informationTextObject.setScale(new arel.Vector3D(5.0, 5.0, 5.0));
 
 				// BUTTON POSITION
-				// artistProfileButton.setPosition(artistProfileButton, 100,100,20);
-				// informationButton.setPosition(informationButton, 200, 100, 20);
-
-				// BUTTON SCALE
-				// artistProfileButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
-				// informationButton.setScale(new arel.Vector3D(5.0,5.0,5.0));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
+				informationButton.setTranslation(setPosition(informationButton, 0, 300, 20));
+				
 
 			}
 			// Plexiglas
@@ -659,7 +659,7 @@ function initialiseObjects(){
 	kepellen_lines = arel.Object.Model3D.createFromImage("kepellen_lines", "resources/Kapelle/lines.png");
 	kepellen_lines.setVisibility(true);
 	kepellen_lines.setCoordinateSystemID(2);
-	kepellen_lines.setScale(new arel.Vector3D(5.0,5.0,5.0));
-	kepellen_lines.setTranslation(setPosition(kepellen_lines, 0, 0, 20));
+	kepellen_lines.setScale(new arel.Vector3D(20.0,20.0,20.0));
+	kepellen_lines.setTranslation(setPosition(kepellen_lines, 0, 0, 10));
 	arel.Scene.addObject(kepellen_lines);
 };

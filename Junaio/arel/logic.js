@@ -7,7 +7,6 @@ var artistProfileButton,
 	kugelButton,
 	domButton,
 	humansButton,
-	hintText,
 	position,
 	artistText,
 	informationText,
@@ -118,7 +117,7 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/teppich_text.png";
 				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
 				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
-				$("#toastText").text("Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden!");
+				$("#toastText").text("Drücke auf den YouTube Button um zu sehen wie solche Teppiche hergestellt werden!");
 				handleToast();
 				// Things to be defined in here
 				// set the texts for artistText
@@ -217,7 +216,7 @@ trackingHandler = function(type, param){
 			if(param[0].getCoordinateSystemID() == 6){
 				// tempCOSID = 6;
 				// checkTrackingChanged();
-				hideHtmlStuff();
+				// hideHtmlStuff();
 				setCOS(6);
 				$("#toastText").text("Gemeinsamkeiten der Gemälde sind Rot eingekreist");
 				handleToast();
@@ -226,9 +225,9 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/adam_eva_text.png";
 
 				//set Position and Scale for standard buttons
-				closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, 50));
-				informationButton.setTranslation(setPosition(informationButton, -60, 180, 50));
+				//closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, -10));
+				informationButton.setTranslation(setPosition(informationButton, -60, 180, -10));
 				artistProfileButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 				informationButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 			}
@@ -244,9 +243,9 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, -200, 0, 20));
-				informationButton.setTranslation(setPosition(informationButton, 0, 0, 20));
+				//closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -200, 0, -10));
+				informationButton.setTranslation(setPosition(informationButton, 0, 0, -10));
 				artistProfileButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 				informationButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 				//Gallery
@@ -268,16 +267,16 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/leber_text.png";
 				informationText = "resources/Text/motiv_text.png";
 				//set Position and Scale for standard buttons
-				closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, -250, -300, 20));
-				informationButton.setTranslation(setPosition(informationButton, 0, -300, 20));
+				//closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -250, -300, -10));
+				informationButton.setTranslation(setPosition(informationButton, 0, -300, -10));
 				artistProfileButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 				informationButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 				//Gallery
 				dumlerGallery = false;
 				galleryButton.setCoordinateSystemID(8);
 				galleryButton.setVisibility(true);
-				galleryButton.setTranslation(setPosition(galleryButton, 250, -300, 20));
+				galleryButton.setTranslation(setPosition(galleryButton, 250, -300, -10));
 				galleryButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 
 			}
@@ -295,8 +294,8 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/gemaelde_text.png";
 				//set Position and Scale for standard buttons
 				closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, 20));
-				informationButton.setTranslation(setPosition(informationButton, -180, 850, 20));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, -10));
+				informationButton.setTranslation(setPosition(informationButton, -180, 850, -10));
 				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 			}
@@ -542,14 +541,14 @@ function initialiseObjects(){
 	duerer.setVisibility(true);
 	duerer.setCoordinateSystemID(6);
 	duerer.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
-	duerer.setTranslation(setPosition(duerer, -210, 0, 50)); //koordinaten
+	duerer.setTranslation(setPosition(duerer, -210, 0, -10)); //koordinaten
 	arel.Scene.addObject(duerer);
 
 	eyck = arel.Object.Model3D.createFromImage("eyck", "resources/AdamEva/eyck.png");
 	eyck.setVisibility(true);
 	eyck.setCoordinateSystemID(6);
 	eyck.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
-	eyck.setTranslation(setPosition(eyck, 160, 0, 50)); //koordinaten
+	eyck.setTranslation(setPosition(eyck, 160, 0, -10)); //koordinaten
 	arel.Scene.addObject(eyck);
 
 
@@ -559,35 +558,35 @@ function initialiseObjects(){
 	appleButton.setVisibility(true);
 	appleButton.setCoordinateSystemID(9);
 	appleButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
-	appleButton.setTranslation(setPosition(appleButton, -150, -100, 30));
+	appleButton.setTranslation(setPosition(appleButton, -150, -100, -10));
 	arel.Scene.addObject(appleButton);
 
 	towerButton = arel.Object.Model3D.createFromImage("towerButton", "resources/Buttons/towerButton.png");
 	towerButton.setVisibility(true);
 	towerButton.setCoordinateSystemID(9);
 	towerButton.setScale(new arel.Vector3D(4.5,4.5,4.5));
-	towerButton.setTranslation(setPosition(towerButton, 700, 240, 40));
+	towerButton.setTranslation(setPosition(towerButton, 700, 240, -10));
 	arel.Scene.addObject(towerButton);
 
 	kugelButton = arel.Object.Model3D.createFromImage("kugelButton", "resources/Buttons/kugelButton.png");
 	kugelButton.setVisibility(true);
 	kugelButton.setCoordinateSystemID(9);
 	kugelButton.setScale(new arel.Vector3D(2.5,2.5,2.5));
-	kugelButton.setTranslation(setPosition(kugelButton, 1200, 180, 30));
+	kugelButton.setTranslation(setPosition(kugelButton, 1200, 180, -10));
 	arel.Scene.addObject(kugelButton);
 
 	domButton = arel.Object.Model3D.createFromImage("domButton", "resources/Buttons/domButton.png");
 	domButton.setVisibility(true);
 	domButton.setCoordinateSystemID(9);
 	domButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
-	domButton.setTranslation(setPosition(domButton, 350, 320, 30));
+	domButton.setTranslation(setPosition(domButton, 350, 320, -10));
 	arel.Scene.addObject(domButton);
 
 	humansButton = arel.Object.Model3D.createFromImage("humansButton", "resources/Buttons/humansButton.png");
 	humansButton.setVisibility(true);
 	humansButton.setCoordinateSystemID(9);
 	humansButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
-	humansButton.setTranslation(setPosition(humansButton, -900, -50, 30));
+	humansButton.setTranslation(setPosition(humansButton, -900, -50, -10));
 	arel.Scene.addObject(humansButton);
 
 

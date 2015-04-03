@@ -225,11 +225,17 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/adam_eva_text.png";
 
 				//set Position and Scale for standard buttons
-				//closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, -10));
-				informationButton.setTranslation(setPosition(informationButton, -60, 180, -10));
 				artistProfileButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+
+				informationButton.setTranslation(setPosition(informationButton, -60, 180, -10));
 				informationButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+
+				artistTextObject.setTranslation(setPosition(artistTextObject, 160, 180, -10));		
+				//artistTextObject.setScale(new arel.Vector3D(6.0,6.0,1.0));
+
+				informationTextObject.setTranslation(setPosition(informationTextObject, 40, 180, -10));		
+				//informationTextObject.setScale(new arel.Vector3D(1.0,1.0,1.0));
 			}
 			// Dumler
 			if(param[0].getCoordinateSystemID() == 7){
@@ -243,17 +249,25 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/plexiglas_plastik.png";
 				informationText = "resources/Text/different_text.png";
 				//set Position and Scale for standard buttons
-				//closeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, -200, 0, -10));
-				informationButton.setTranslation(setPosition(informationButton, 0, 0, -10));
 				artistProfileButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+
+				informationButton.setTranslation(setPosition(informationButton, 0, 0, -10));		
 				informationButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+
+				artistTextObject.setTranslation(setPosition(artistTextObject, -60, 180, -10));		
+				artistTextObject.setScale(new arel.Vector3D(1.0,1.0,1.0));
+
+				informationTextObject.setTranslation(setPosition(informationTextObject, -60, 180, -10));		
+				informationTextObject.setScale(new arel.Vector3D(1.0,1.0,1.0));
+
 				//Gallery
 				dumlerGallery = true;
 				galleryButton.setCoordinateSystemID(7);
 				galleryButton.setVisibility(true);
 				galleryButton.setTranslation(setPosition(galleryButton, 200, 0, 20));
 				galleryButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+
 			}
 			// Leber
 			if(param[0].getCoordinateSystemID() == 8){
@@ -267,11 +281,18 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/leber_text.png";
 				informationText = "resources/Text/motiv_text.png";
 				//set Position and Scale for standard buttons
-				//closeButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, -250, -300, -10));
-				informationButton.setTranslation(setPosition(informationButton, 0, -300, -10));
 				artistProfileButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+
+				informationButton.setTranslation(setPosition(informationButton, 0, -300, -10));
 				informationButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+
+				artistTextObject.setTranslation(setPosition(artistTextObject, -100, 0, -20));		
+				//artistTextObject.setScale(new arel.Vector3D(1.3,1.3,1.3));
+
+				informationTextObject.setTranslation(setPosition(informationTextObject, 0, 0, -20));		
+				//informationTextObject.setScale(new arel.Vector3D(1.0,1.0,1.0));
+
 				//Gallery
 				dumlerGallery = false;
 				galleryButton.setCoordinateSystemID(8);
@@ -293,11 +314,17 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/numa_text.png";
 				informationText = "resources/Text/gemaelde_text.png";
 				//set Position and Scale for standard buttons
-				closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, -10));
-				informationButton.setTranslation(setPosition(informationButton, -180, 850, -10));
 				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+
+				informationButton.setTranslation(setPosition(informationButton, -180, 850, -10));
 				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+
+				artistTextObject.setTranslation(setPosition(artistTextObject, -60, 180, -10));		
+				artistTextObject.setScale(new arel.Vector3D(1.3,1.3,1.3));
+
+				informationTextObject.setTranslation(setPosition(informationTextObject, 0, 0, 0));		
+				informationTextObject.setScale(new arel.Vector3D(12.0,12.0,12.0));
 			}
 
 		}

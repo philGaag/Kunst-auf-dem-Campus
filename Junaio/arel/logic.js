@@ -117,7 +117,7 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/teppich_text.png";
 				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
 				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
-				$("#toastText").text("Drücke auf den YouTube Button um zu sehen wie solche Teppiche hergestellt werden!");
+				$("#toastText").text("Test!");
 				handleToast();
 				// Things to be defined in here
 				// set the texts for artistText
@@ -137,20 +137,21 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/jones_text.png";
 				informationText = "resources/Text/kapellen_text.png";
 
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, -300, -600, 25));
+				informationButton.setTranslation(setPosition(informationButton, -300, -300, 25));
+
 				artistProfileButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));
 				informationButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));
 
 				// TEXT POSITION
-				artistTextObject.setTranslation(setPosition(artistTextObject, 0, 0, 20));
-				informationTextObject.setTranslation(setPositioin(informationTextObject, 0, 0, 20));
+				artistTextObject.setTranslation(setPosition(artistTextObject, 200, 0, 20));
+				informationTextObject.setTranslation(setPosition(informationTextObject, 200, 0, 20));
 
 				// TEXT SCALE
-				artistTextObject.setScale(new arel.Vector3D(5.0, 5.0, 5.0));
-				informationTextObject.setScale(new arel.Vector3D(5.0, 5.0, 5.0));
+				artistTextObject.setScale(new arel.Vector3D(10.0, 10.0, 10.0));
+				informationTextObject.setScale(new arel.Vector3D(10.0, 10.0, 10.0));
 
 				// BUTTON POSITION
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 0, 0, 20));
-				informationButton.setTranslation(setPosition(informationButton, 0, 300, 20));
 				
 
 			}
@@ -166,7 +167,7 @@ trackingHandler = function(type, param){
 				informationText = "resources/Text/gollwitzer_text.png";
 
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, -300, -600, 25));
-				informationButton.setTranslation(setPosition(artistProfileButton, 0, -600, 25));
+				informationButton.setTranslation(setPosition(informationButton, 0, -600, 25));
 				closeButton.setTranslation(setPosition(closeButton, 700, -400, 25));
 				artistProfileButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));
 				informationButton.setScale(new arel.Vector3D(2.0, 2.0, 2.0));

@@ -22,6 +22,21 @@ var artistProfileButton,
 	tempCOSID,
 	plexiModelIsVisible = false,
 	dumlerGallery = false;
+	/*blauButton;
+	gruenButton;
+	kopfmitfigurButton;
+	kopfmitaugenButton;
+	kopffußButton;
+
+	videoButton; 
+
+	NaturwissenschaftButton;
+	TheologieButton;
+	MedizinButton;
+	RechtswissenschaftButton;
+	PhilosophieButton;
+	TechnologieButton;
+	*/
 
 arel.sceneReady(function(){
 	stopLoadingScreen();
@@ -42,9 +57,72 @@ arel.sceneReady(function(){
 	arel.Events.setListener(arel.Scene.getObject("layerNumberTwo"),function(obj, type, params){handleLayers(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("layerNumberThree"),function(obj, type, params){handleLayers(obj, type, params);});
 	arel.Events.setListener(arel.Scene.getObject("youTubeButton"),function(obj, type, params){playVideo(type);});
-
-
+//*arel.Events.setListener(arel.Scene.getObject("blauButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("gruenButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("kopfmitfigurButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("kopfmitaugenButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("kopffußButton"),function(obj, type, params){openImage(obj, type, params);});
+//arel.Events.setListener(arel.Scene.getObject("VideoButton"),function(obj, type, params){playVideo1(type);});
+//*arel.Events.setListener(arel.Scene.getObject("MedizinButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("NaturwissenschaftButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("TheologieButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("RechtswissenschaftButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("PhilosophieButton"),function(obj, type, params){openImage(obj, type, params);});
+//*arel.Events.setListener(arel.Scene.getObject("TechnologieButton"),function(obj, type, params){openImage(obj, type, params);});
 });
+/*openImage = function(obj, type, params){
+	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		if(blau){
+			arel.Media.openImage(resources/blau.jpg);
+		}else{
+			if(gruen){
+			arel.Media.openImage(resources/gruen.jpg);
+			usw
+
+			gleiches auch für die brunnenbilder?
+
+openImage = function(obj, type, params){
+	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		if(MedizinButton){
+			arel.Media.openImage(resources/Brunnen/stab.jpg) && arel.Media.openImage(resources/Brunnen/eid.jpg)
+		}else{
+			if(NaturwissenschaftButton){
+			arel.Media.openImage(resources/.jpg);
+
+		}
+	}
+}; 
+oder mit switch case?
+    	switch(obj){
+    		case blauButton: 
+    			arel.Media.startSound("resources/audio/Apfel.mp3");
+    		break;
+
+    		case towerButton: 
+    			arel.Media.startSound("resources/audio/Fernsehturm.mp3");
+    		break;
+
+    		case kugelButton: 
+    			arel.Media.startSound("resources/audio/Kugel.mp3");
+    		break;
+
+    		case domButton: 
+    			arel.Media.startSound("resources/audio/Dom.mp3");
+    		break;
+
+    		case humansButton: 
+    			arel.Media.startSound("resources/audio/Personen.mp3");
+    		break;
+    	}
+
+    }
+};
+playVideo1 = function(type){
+	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
+		arel.Media.startVideo("resources/Video/Brunnen.MOV"); //komprimiere
+	}
+};*/
+
 openImageGallery = function(obj, type, params){
 	if(type && type === arel.Events.Object.ONTOUCHSTARTED){
 		if(dumlerGallery){
@@ -63,7 +141,7 @@ setPosition = function(target, x, y, z){
 };
 setCloseButton = function(target){
 	position = target.getTranslation();
-	position.setX(position.getX() + 400);
+	position.setX(position.getX() + 350);
     position.setY(position.getY() + 500);
     position.setZ(position.getZ() + 25);
     return position;
@@ -116,8 +194,8 @@ trackingHandler = function(type, param){
 				// checkTrackingChanged();
 				// hideHtmlStuff();
 				setCOS(1);
-				artistText = "resources/Text/plexitext.jpg";
-				informationText = "resources/Text/gollwitz.png";
+				artistText = "resources/Text/all_texts.png";
+				informationText = "resources/Text/op45percent.png";
 				// artistTextObject.setTranslation(setPosition(artistTextObject, 300, 100, 0));
 				// artistProfileButton.setScale(new arel.Vector3D(10.0,10.0,10.0));
 				$("#toastText").text("Drücke auf den youtube knopf um zu sehen wie solche teppiche hergestellt werden!");
@@ -276,6 +354,7 @@ trackingHandler = function(type, param){
 				informationButton.setTranslation(setPosition(informationButton, 0, -300, 20));
 				artistProfileButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
 				informationButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+
 				//Gallery
 				dumlerGallery = false;
 				galleryButton.setCoordinateSystemID(8);
@@ -302,6 +381,47 @@ trackingHandler = function(type, param){
 				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 			}
+			/* Kopf77
+			if(param[0].getCoordinateSystemID() == 10){
+				// tempCOSID = 10;
+				// checkTrackingChanged();
+				hideHtmlStuff();
+				setCOS(10);
+				$("#toastText").text("Klicke auf die Bilder um sie zu vergrößern");
+				// define the text for the standard buttons
+				artistText = "resources/Text/antes_text.png";
+				informationText = "resources/Text/kopf_text.png";
+				//set Position and Scale for standard buttons
+				closeButton.setScale(new arel.Vector3D(0.5,0.5,0.5));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 60, 180, 50));
+				informationButton.setTranslation(setPosition(informationButton, -60, 180, 50));
+				artistProfileButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
+				informationButton.setScale(new arel.Vector3D(1.0,1.0,1.0)); 
+
+				/Brunnen
+
+				if(param[0].getCoordinateSystemID() == 11){
+				// tempCOSID = 11;
+				// checkTrackingChanged();
+				// hideHtmlStuff();
+				setCOS(11);
+				$("#toastText").text("Klicke auf die Wörter um die Symbole dahinter zu entdecken");
+				// define the text for the standard buttons
+				artistText = "resources/Text/kirchner.png";
+				informationText = "resources/Text/brunnen_text.png";
+				//set Position and Scale for standard buttons
+				closeButton.setScale(new arel.Vector3D(2.0,2.0,2.0));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, 20));
+				informationButton.setTranslation(setPosition(informationButton, -180, 850, 20));
+				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
+
+				VideoButton.setVisibility(true); //?
+                VideoButton.setCoordinateSystemID(11);
+				VideoButton.setVisibility(true);
+				VideoButton.setTranslation(setPosition(VIdeoButton, 200, 0, 20));
+				VIdeoButton.setScale(new arel.Vector3D(1.5,1.5,1.5));
+			}*/
 
 		}
 		//if the pattern is lost tracking, show the information to hold your phone over the pattern
@@ -545,8 +665,78 @@ function initialiseObjects(){
 	eyck.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
 	eyck.setTranslation(setPosition(eyck, 160, 0, 50)); //koordinaten
 	arel.Scene.addObject(eyck);
+	//Kopf77 Objekte COS10
 
+	/* blauButton = arel.Object.Model3D.createFromImage("blau", "resources/Kopf77/blau.jpg");
+	blauButton.setVisibility(true);
+	blauButton.setCoordinateSystemID(10);
+	blauButton.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
+	blauButton.setTranslation(setPosition(blauButton, 160, 0, 50)); //koordinaten
+	blauButton.Scene.addObject(blau);
 
+	/* gruenButton = arel.Object.Model3D.createFromImage("gruen", "resources/Kopf77/gruen.jpg");
+	gruenButton.setVisibility(true);
+	gruenButton.setCoordinateSystemID(10);
+	gruenButton.setScale(new arel.Vector3D(3.0,3.0,3.0)); //größe
+	gruenButton.setTranslation(setPosition(gruenButton, 160, 0, 50)); //koordinaten
+	gruenButton.Scene.addObject(gruen);
+
+	gleiches für kopfmitfigur,kopfmitaugen.kopfueßler
+
+	//Brunnen Objekte Cos 11
+
+	VideoButton = arel.Object.Model3D.createFromImage("VideoButton", "resources/Buttons/video.png");
+	VideoButton.setVisibility(true);
+	VideoButton.setCoordinateSystemID(11);
+	VideoButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	VideoButton.setTranslation(setPosition(VideoButton, -150, -100, 30));
+	arel.Scene.addObject(VideoButton);
+
+	NaturwissenschaftButton = arel.Object.Model3D.createFromImage("NaturwissenschaftButton", "resources/Buttons/natur.png");
+	NaturwissenschaftButton.setVisibility(true);
+	NaturwissenschaftButton.setCoordinateSystemID(11);
+	NaturwissenschaftButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	NaturwissenschaftButton.setTranslation(setPosition(NaturwissenschaftButton, -150, -100, 30));
+	arel.Scene.addObject(NaturwissenschaftButton);
+
+	TheologieButton = arel.Object.Model3D.createFromImage("TheologieButton", "resources/Buttons/Theo.png");
+	TheologieButton.setVisibility(true);
+	TheologieButton.setCoordinateSystemID(11);
+	TheologieButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	TheologieButton.setTranslation(setPosition(TheologieButton, -150, -100, 30));
+	arel.Scene.addObject(TheologieButton);
+
+	PhilosophieButton = arel.Object.Model3D.createFromImage("PhilosophieButton", "resources/Buttons/Phil.png");
+	PhilosophieButton.setVisibility(true);
+	PhilosophieButton.setCoordinateSystemID(11);
+	PhilosophieButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	PhilosophieButton.setTranslation(setPosition(PhilosophieButton, -150, -100, 30));
+	arel.Scene.addObject(TheologieButton);
+
+    MedizinButton = arel.Object.Model3D.createFromImage("MedizinButton", "resources/Buttons/Medizin.png");
+	MedizinButton.setVisibility(true);
+	MedizinButton.setCoordinateSystemID(11);
+	MedizinButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	MedizinButton.setTranslation(setPosition(MedizinButton, -150, -100, 30));
+	arel.Scene.addObject(MedizinButton);
+
+	RechtswissenschaftButton = arel.Object.Model3D.createFromImage("RechtswissenschaftButton", "resources/Buttons/Rechtswissenschaften.png");
+	RechtswissenschaftButton.setVisibility(true);
+	RechtswissenschaftButton.setCoordinateSystemID(11);
+	RechtswissenschaftButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	RechtswissenschaftButton.setTranslation(setPosition(RechtswissenschaftButton, -150, -100, 30));
+	arel.Scene.addObject(RechtswissenschaftButton);
+
+	TechnologieButton = arel.Object.Model3D.createFromImage("TechnologieButton", "resources/Buttons/Techno.png");
+	TechnologieButton.setVisibility(true);
+	TechnologieButton.setCoordinateSystemID(11);
+	TechnologieButton.setScale(new arel.Vector3D(4.0,4.0,4.0));
+	TechnologieButton.setTranslation(setPosition(TechnologieButton, -150, -100, 30));
+	arel.Scene.addObject(TechnologieButton);
+
+	BILDER die beim klicken auf Button erscheinen
+
+*/
 	// Numa Objekte COS: 9
 
 	appleButton = arel.Object.Model3D.createFromImage("appleButton", "resources/Buttons/appleButton.png");
@@ -648,4 +838,12 @@ function initialiseObjects(){
 	youTubeButton.setScale(new arel.Vector3D(1.0,1.0,1.0));
 	youTubeButton.setTranslation(setPosition(youTubeButton, 100, 50, 20));
 	arel.Scene.addObject(youTubeButton);
+
+	// kapelle
+	kepellen_lines = arel.Object.Model3D.createFromImage("kepellen_lines", "resources/Kapelle/lines.png");
+	kepellen_lines.setVisibility(true);
+	kepellen_lines.setCoordinateSystemID(1);
+	kepellen_lines.setScale(new arel.Vector3D(5.0,5.0,5.0));
+	kepellen_lines.setTranslation(setPosition(kepellen_lines, 0, 0, 20));
+	arel.Scene.addObject(kepellen_lines);
 };

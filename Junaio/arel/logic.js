@@ -315,16 +315,16 @@ trackingHandler = function(type, param){
 				artistText = "resources/Text/numa_text.png";
 				informationText = "resources/Text/gemaelde_text.png";
 				//set Position and Scale for standard buttons
-				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 850, 10));
+				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 650, 20));
 				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 
-				informationButton.setTranslation(setPosition(informationButton, -180, 850, 10));
+				informationButton.setTranslation(setPosition(informationButton, -180, 650, 10));
 				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 
-				artistTextObject.setTranslation(setPosition(artistTextObject, -60, 180, 0));		
+				artistTextObject.setTranslation(setPosition(artistTextObject, -60, 40, 5));		
 				artistTextObject.setScale(new arel.Vector3D(14.0,14.0,14.0));
 
-				informationTextObject.setTranslation(setPosition(informationTextObject, 0, 0, 0));		
+				informationTextObject.setTranslation(setPosition(informationTextObject, 0, -100, 5));		
 				informationTextObject.setScale(new arel.Vector3D(14.0,14.0,14.0));
 			}
 

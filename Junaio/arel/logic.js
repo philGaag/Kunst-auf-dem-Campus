@@ -178,7 +178,7 @@ trackingHandler = function(type, param){
 
 				artistTextObject.setScale(new arel.Vector3D(15.0, 15.0, 15.0));
 				informationTextObject.setScale(new arel.Vector3D(15.0, 15.0, 15.0));
-				
+
 				artistTextObject.setTranslation(setPosition(artistTextObject, 0, 250, 15));
 				informationTextObject.setTranslation(setPosition(informationTextObject, 0, 250, 15));
 
@@ -323,7 +323,7 @@ trackingHandler = function(type, param){
 				artistProfileButton.setTranslation(setPosition(artistProfileButton, 180, 650, 20));
 				artistProfileButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 
-				informationButton.setTranslation(setPosition(informationButton, -180, 650, 10));
+				informationButton.setTranslation(setPosition(informationButton, -180, 650, 20));
 				informationButton.setScale(new arel.Vector3D(3.0,3.0,3.0));
 
 				artistTextObject.setTranslation(setPosition(artistTextObject, -60, 40, 5));		
